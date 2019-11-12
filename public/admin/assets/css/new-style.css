@@ -1,0 +1,108 @@
+::-webkit-scrollbar {
+    width: 9px
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background-color: #fff
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #F5CB14;
+    outline: 1px solid #fff;
+    border-radius: 30px
+}
+
+::-moz-selection {
+    background: #F5CB14;
+    color: #fff
+}
+
+::selection {
+    background: #F5CB14;
+    color: #fff
+}
+body.widescreen {
+    background-color: rgb(248, 212, 4);
+}
+body.fixed-left.widescreen {
+    background-color: #ddd;
+    position: relative;
+    min-height: 100vh;
+}
+body.fixed-left.widescreen:after{
+    content: "";
+    position: absolute;
+    left: 26px;
+    bottom: 45px;
+    background-image: url('../images/before2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+}
+div#wrapper {
+    position: absolute;
+    z-index: 9;
+}
+/************************************** Start Login *****************************************/
+.wrapper-page .m-t-40 > .text-center {
+    background-image: url(../images/logo.png);
+    background-size: 180px;
+}
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .btn-custom.focus, .btn-custom:active, .btn-custom:focus, .btn-custom:hover, .open > .dropdown-toggle.btn-custom {
+    border: 2px solid #F5CB14 !important;
+}
+.account-pages {
+    background-image: url('../images/login1.jpg') !important;
+background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom center !important}
+.account-pages:before {
+    background-color: rgba(116, 115, 115, 0.6);
+}
+h4.text-uppercase.font-bold.m-b-0 {
+    padding-top: 127px;
+}
+/************************************** End Login *****************************************/
+
+
+
+/************************************** Start Datatable *****************************************/
+.table-striped > tbody > tr:nth-of-type(odd), .table-hover > tbody > tr:hover, .table > thead > tr > td.active, .table > tbody > tr > td.active, .table > tfoot > tr > td.active, .table > thead > tr > th.active, .table > tbody > tr > th.active, .table > tfoot > tr > th.active, .table > thead > tr.active > td, .table > tbody > tr.active > td, .table > tfoot > tr.active > td, .table > thead > tr.active > th, .table > tbody > tr.active > th, .table > tfoot > tr.active > th {
+    background-color: #e1e1e1 !important;
+}
+/************************************** End Datatable *****************************************/
+
+
+/************************************** Start Forms *****************************************/
+textarea.form-control {
+    height: 90px !important;
+    resize: none;
+    overflow: auto;
+}
+/************************************** End Forms *****************************************/
+
+
+
+
+
+/************************************** Responsive *****************************************/
+@media (max-width:767px) {
+    .account-pages {
+        background-size: 149% 100% !important;
+        background-position: bottom center !important;
+    }
+}
+
+
+@media (max-width:480px) {
+    
+    .btn-group.pull-right.m-t-15 {
+        float: none !important;
+        display: table;
+        margin: 0 auto;
+    }
+}
+
