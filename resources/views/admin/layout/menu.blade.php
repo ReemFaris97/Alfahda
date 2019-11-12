@@ -54,6 +54,7 @@
                 <li><a href="{{route('admin.galleries.index')}}" class="waves-effect"><i class="zmdi zmdi-accounts"></i><span>الصور  والفيديوهات</span></a></li>
                 <li><a href="{{route('admin.actions.index')}}" class="waves-effect"><i class="zmdi zmdi-format-list-bulleted"></i><span> المبادرات</span></a></li>
 
+                <li><a href="{{route('admin.ambassadors.index')}}" class="waves-effect"><i class="zmdi zmdi-accounts"></i><span>سفراء  الفهده</span></a></li>
 
                 <li><a href="{{route('admin.participants.index')}}" class="waves-effect"><i class="zmdi zmdi-accounts"></i><span>مشاركات الفهده</span></a></li>
                 <li><a href="{{route('admin.partners.index')}}" class="waves-effect"><i class="zmdi zmdi-format-list-bulleted"></i><span> شركاء النجاح</span></a></li>

@@ -50,7 +50,7 @@
                 <a href="index.blade.php" class="logo-action">
                     <img src="{{asset('website/img/logo2.png')}}">
                 </a>
-                <a class="back2" href="index.blade.php">
+                <a class="back2" href="{{route('website.index')}}">
                     <h3>الصفحه السابقه</h3>
                     <span>
                         <i class="fa fa-angle-left"></i>
@@ -132,15 +132,15 @@
         </form>
 
         <ul class="social">
-            <li><a href="https://www.facebook.com/elfahdah/"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/elfahdah"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.snapchat.com/add/elfahdah"><i class="fab fa-snapchat-ghost"></i></a></li>
-            <li><a href="https://instagram.com/elfahdah?igshid=1m8svcvizh4np"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://m.youtube.com/channel/UCG9eOldL5KYi2nAo_-NWvkw"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="{{ getsetting('facebook') }}"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="{{ getsetting('twitter') }}"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="{{ getsetting('snapchat') }}"><i class="fab fa-snapchat-ghost"></i></a></li>
+            <li><a href="{{ getsetting('instagram') }}"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="{{ getsetting('youtube') }}"><i class="fab fa-youtube"></i></a></li>
         </ul>
 
         <a href="index.blade.php" class="logo-nav">
-            <img src="img/logo2.png">
+            <img src="{{asset('website/img/logo2.png')}}">
         </a>
 
         <div class="copyright"> جميع الحقوق محفوظة للفهدة 2019 <span>&copy;</span> </div>
@@ -154,9 +154,9 @@
          SCRIPT
          ===================================-->
 
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/all.min.js"></script>
+    <script src="{{asset('website/js/jquery-1.11.1.min.js')}}"></script>
+    <script src="{{asset('website/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('website/js/all.min.js')}}"></script>
 
 
 
@@ -165,9 +165,9 @@
     <!----------------------------------- END ------------------------------------------>
 
 
-    <script src="js/script.js"></script>
+    <script src="{{asset('website/js/script.js')}}"></script>
 
-    <script src="js/wow.min.js"></script>
+    <script src="{{asset('website/js/wow.min.js')}}"></script>
     <script>
         new WOW().init();
 

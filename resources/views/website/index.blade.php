@@ -10,8 +10,8 @@
             <img src="{{asset('website/img/pattern.png')}}" class="arabisk" alt="شكل أرابيسك">
             <div class="owl-carousel owl-theme main-slider" id="owl-main">
                 <div class="item">
-                    <video poster="img/shape20.jpg" preload="none" class="shape">
-                        <source src="img/fahdah-5.mp4" type="video/mp4">
+                    <video poster="{{asset('website/img/shape20.jpg')}}" preload="none" class="shape">
+                        <source src="{{asset('website/img/fahdah-5.mp4')}}" type="video/mp4">
                         للأسف متصفحك لايدعم تشغيل الفيديوهات
                     </video>
                     <span class="play-video">
@@ -26,7 +26,7 @@
                             <nav>
                                 <ul>
                                     <li>
-                                        <a href="all-actions.blade.php"> كل المبادرات</a>
+                                        <a href="{{route('website.all-actions')}}"> كل المبادرات</a>
                                         <span></span><span></span><span></span><span></span>
                                     </li>
                                 </ul>
@@ -94,59 +94,18 @@
             <h2 class="title green">مبادراتنا</h2>
             <div class="slide wow slideInUp">
                 <div id="owl-actions" class="owl-carousel owl-theme">
-                    <div class="item">
-                        <a href="action1.blade.php">
-                            <div class="act-img">
-                                <img src="img/mb/mb1.png">
-                            </div>
-                            <h4> مبادرة نابض الرياضية </h4>
-                        </a>
-                    </div>
 
-                    <div class="item">
-                        <a href="action2.blade.php">
-                            <div class="act-img">
-                                <img src="img/mb/mb4.png">
-                            </div>
-                            <h4> مبادرة دريمز </h4>
-                        </a>
-                    </div>
 
-                    <div class="item">
-                        <a href="action3.blade.php">
+                @foreach($actions as $action)
+                        <div class="item">
+                        <a href="{{route('website.action',$action->id)}}">
                             <div class="act-img">
-                                <img src="img/mb/mb3.png">
+                                <img src="{{getimg($action->image)}}">
                             </div>
-                            <h4> مبادرة اقتفي </h4>
+                            <h4> {{$action->name}} </h4>
                         </a>
                     </div>
-
-                    <div class="item">
-                        <a href="action4.blade.php">
-                            <div class="act-img">
-                                <img src="img/mb/mb2.png">
-                            </div>
-                            <h4> مبادرة سفراء الفهدة </h4>
-                        </a>
-                    </div>
-
-                    <div class="item">
-                        <a href="action5.blade.php">
-                            <div class="act-img">
-                                <img src="img/mb/mb5.png">
-                            </div>
-                            <h4> مبادرة زيارة الفهدة </h4>
-                        </a>
-                    </div>
-
-                    <div class="item">
-                        <a href="action6.blade.php">
-                            <div class="act-img">
-                                <img src="img/mb/mb6.png">
-                            </div>
-                            <h4>مبادرة تيك كيدز </h4>
-                        </a>
-                    </div>
+               @endforeach
 
                 </div>
             </div>

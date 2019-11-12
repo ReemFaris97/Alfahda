@@ -42,6 +42,8 @@ Route::group(array('as'=>'website.','middleware'=>'auth','namespace' => 'website
     Route::get('/gallery', 'indexController@gallery')->name('gallery');
     Route::get('/all-actions', 'indexController@all_actions')->name('all-actions');
 
+    Route::get('/action/{id}', 'indexController@action')->name('action');
+    Route::get('/sofra-singel/{id}', 'indexController@sofra_singel')->name('sofra-singel');
 
     Route::post('/contacts', 'indexController@postContacts')->name('Contacts');
 

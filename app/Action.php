@@ -8,9 +8,13 @@ class Action extends Model
 {
 
     protected $fillable = [
-    'name','description','user_id','type'
+    'name','description','user_id','type','image'
     ];
 
+    public function images()
+    {
+        return $this->hasMany(ActionImage::class,'action_id');
+    }
 
 
 

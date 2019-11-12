@@ -13,5 +13,6 @@ class ActionImage extends Model
 
 
 
+    protected $table='actions_image';
 
 }

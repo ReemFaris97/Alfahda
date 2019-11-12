@@ -104,18 +104,17 @@ class ambassadorController extends Controller
             'goals'=>'required|string|',
             'message'=>'required|string|',
 
-            'image'=>'required|image|',
 
 
 
 
         ]);
+        $inputs=$request->all();
+        if($request->hasFile('image')) {
+            $image = uploader($request, 'image');
 
-        $image = uploader($request, 'image');
-
-
-        $inputs = $request->all();
-        $inputs['image'] = $image;
+            $inputs['image'] = $image;
+        }
 
 
 

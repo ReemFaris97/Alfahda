@@ -37,7 +37,7 @@
                     </thead>
                     <tbody>
                     @php $i = 1; @endphp
-                    @foreach ($actions as $action)
+                    @foreach ($actions as $row)
                         <tr>
                             <td>{{$i++}}</td>
                             <td>{{$row->name}}</td>

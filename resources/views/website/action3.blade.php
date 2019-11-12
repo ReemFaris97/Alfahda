@@ -23,7 +23,7 @@
     <!-------- Start About ------>
     <section class="about all-sections right-text">
         <div class="container">
-            <h2 class="title green">مبادرة اقتفي </h2>
+            <h2 class="title green">{{$action->name}}</h2>
 
              <div class="ui-txt">
                 <p>
@@ -39,97 +39,29 @@
     </section>
     <!-------- End About ------>
 
-
+    @if (isset($action->images))
     <!-------- Start action-imgs ------>
     <section class="action-imgs all-sections">
         <div class="container">
+
             <h2 class="title green">صور المبادرة</h2>
 
             <section class="action-in">
                 <article class="cube1">
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape1.png">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape1.png">
-                            </a>
-                        </div>
-                    </section>
 
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape2.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape2.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape3.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape3.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape5.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape5.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape6.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape6.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape7.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape7.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape3.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape3.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape5.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape5.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape2.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape2.jpg">
-                            </a>
-                        </div>
-                    </section>
+                    @foreach($action->images as $image)
+                        <section class="bee3D--slide">
+                            <div class="bee3D--inner">
+                                <a class="partici1 demo-text" data-fancybox="Actions" href="{{getimg($image->imge)}}">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <img src="{{getimg($image->image)}}">
+                                </a>
+                            </div>
+                        </section>
+                @endforeach
 
 
-                    <!-- Navigation Arrows -->
+                <!-- Navigation Arrows -->
                     <span class="bee3D--nav bee3D--nav__prev"> <i class='fas fa-angle-left'> </i></span>
                     <span class="bee3D--nav bee3D--nav__next"> <i class='fas fa-angle-right'> </i> </span>
 
@@ -139,7 +71,7 @@
         </div>
     </section>
     <!-------- End action-imgs ------>
-
+@endif
 @stop
 
 
