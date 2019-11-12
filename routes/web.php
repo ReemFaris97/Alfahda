@@ -37,7 +37,7 @@ Route::group(array('prefix' => 'dashboard','as'=>'admin.','middleware'=>'auth','
     Route::resource('settings', 'SettingController');
 });
 
-Route::group(array('as'=>'website.','middleware'=>'auth','namespace' => 'website'), function() {
+Route::group(array('as'=>'website.','namespace' => 'website'), function() {
     Route::get('/', 'indexController@index')->name('index');
     Route::get('/about', 'indexController@about')->name('about');
     Route::get('/contact', 'indexController@contact')->name('contact');
