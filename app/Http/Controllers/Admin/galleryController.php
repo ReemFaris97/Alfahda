@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Basic;
 use App\Category;
+use App\Gallery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Activity;
@@ -18,9 +19,9 @@ class galleryController extends Controller
     public function index()
     {
 
-       $categories=Category::all();
+        $galleries=Gallery::all();
 
-     return view('admin.categories.index',compact('categories'));
+     return view('admin.galleries.index',compact('galleries'));
 }
     /**
      * Show the form for creating a new resource.
@@ -29,7 +30,7 @@ class galleryController extends Controller
      */
     public function create()
     {
-        return view('admin.categories.create');
+        return view('admin.galleries.create');
     }
 
     /**
@@ -42,16 +43,17 @@ class galleryController extends Controller
     {
         $this->validate($request,[
 
-        'ar_name'=>'required|string|',
-
-            'en_name'=>'required|string|',
 
 
 
     ]);
+        $image = uploader($request, 'image');
+
+
         $inputs = $request->all();
-        Category::create($inputs);
-        alert()->success('تم اضافة القسم بنجاح !')->autoclose(5000);
+        $inputs['image'] = $image;
+        Gallery::create($inputs);
+        alert()->success('تم اضافة الصورة بنجاح !')->autoclose(5000);
         return back();
     }
 
@@ -74,7 +76,7 @@ class galleryController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.categories.edit')->with('category',Category::find($id));
+        return view('admin.galleries.edit')->with('gallery',Gallery::find($id));
     }
 
     /**
@@ -86,13 +88,11 @@ class galleryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category=Category::find($id);
+        $gallery=Gallery::find($id);
 
 
         $this->validate($request,[
 
-            'ar_name'=>'required|string|',
-            'en_name'=>'required|string|',
 
 
 
@@ -101,13 +101,17 @@ class galleryController extends Controller
         ]);
 
 
-        $inputs=$request->all();
+        $image = uploader($request, 'image');
+
+
+        $inputs = $request->all();
+        $inputs['image'] = $image;
 
 
 
-        $category->update($inputs);
+        $gallery->update($inputs);
 
-        alert()->success('تم تعديل القسم بنجاح !')->autoclose(5000);
+        alert()->success('تم تعديل  الصورة بنجاح !')->autoclose(5000);
         return back();
     }
 
@@ -120,12 +124,12 @@ class galleryController extends Controller
     public function destroy($id)
     {
 
-        $category=Category::find($id);
+        $gallery=Gallery::find($id);
 
 
-        $category->delete();
+        $gallery->delete();
 
-        alert()->success('تم حذف القسم  بنجاح !')->autoclose(5000);
+        alert()->success('تم حذف  الصورة  بنجاح !')->autoclose(5000);
 
         return back();
     }

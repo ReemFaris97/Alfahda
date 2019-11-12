@@ -21,42 +21,42 @@
         <div class="container">
             <h2 class="title green">اتصل بنا</h2>
 
+            {!!Form::open( ['route' => 'website.Contacts' ,'class'=>'contact-form form1', 'method' => 'Post','files' => true]) !!}
 
-            <form action="#" class="contact-form form1">
                 <div class="row">
 
                     <div class="col-sm-6 col-xs-12 wow slideInRight">
                         <div class="input-block">
                             <label for="">الاسم</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="name" class="form-control">
                         </div>
                     </div>
 
                     <div class="col-sm-6 col-xs-12 wow slideInLeft">
                         <div class="input-block">
                             <label for="">البريد الإلكترونى</label>
-                            <input type="email" class="form-control">
+                            <input type="email"  name="email" class="form-control">
                         </div>
                     </div>
 
                     <div class="col-sm-6 col-xs-12 wow slideInRight">
                         <div class="input-block">
                             <label for="">رقم الجوال</label>
-                            <input type="number" class="form-control">
+                            <input type="number" name="phone" class="form-control">
                         </div>
                     </div>
 
                     <div class="col-sm-6 col-xs-12 wow slideInLeft">
                         <div class="input-block">
                             <label for="">عنوان الرسالة</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="title" class="form-control">
                         </div>
                     </div>
 
                     <div class="col-xs-12 wow slideInUp">
                         <div class="input-block textarea">
                             <label for="">اكتب رسالتك..</label>
-                            <textarea rows="3" type="text" class="form-control"></textarea>
+                            <textarea rows="3" type="text" name="message" class="form-control"></textarea>
                         </div>
                     </div>
 
@@ -73,6 +73,8 @@
     </section>
    @stop
 @section('scripts')
+
+
     <!----------------------- This for here only ---------------------->
     <script>
         //material contact form animation

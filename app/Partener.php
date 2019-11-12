@@ -12,6 +12,7 @@ class Partener extends Model
     ];
 
 
+    protected  $table='partners';
 
 
 }

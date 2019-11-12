@@ -54,6 +54,8 @@ class sliderController extends Controller
 
 
         $inputs = $request->all();
+
+
         $inputs['image'] = $image;
 
         Slider::create($inputs);

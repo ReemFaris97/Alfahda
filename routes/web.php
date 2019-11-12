@@ -26,7 +26,7 @@ Route::group(array('prefix' => 'dashboard','as'=>'admin.','middleware'=>'auth','
     Route::resource('members', 'memberController');
     Route::resource('actions', 'actionController');
     Route::resource('participants', 'participantController');
-    Route::resource('partners', 'contactController');
+    Route::resource('partners', 'partnerController');
     Route::resource('galleries', 'galleryController');
     Route::resource('subscribers', 'subscribeController');
     Route::resource('ambassadors', 'ambassadorController');
@@ -38,6 +38,13 @@ Route::group(array('as'=>'website.','middleware'=>'auth','namespace' => 'website
     Route::get('/', 'indexController@index')->name('index');
     Route::get('/about', 'indexController@about')->name('about');
     Route::get('/contact', 'indexController@contact')->name('contact');
+    Route::get('/gallery', 'indexController@gallery')->name('gallery');
+    Route::get('/gallery', 'indexController@gallery')->name('gallery');
+    Route::get('/all-actions', 'indexController@all_actions')->name('all-actions');
+
+
+    Route::post('/contacts', 'indexController@postContacts')->name('Contacts');
+
 
 });
 

@@ -15,7 +15,7 @@ function getsetting($name)
 {
     $setting=\App\Setting::where('name',$name)->first();
     if (!$setting) return "";
-    return $setting->value();
+    return $setting->ar_value;
 
 }
 
@@ -162,10 +162,19 @@ function getimg($filename)
  */
 function uploader($request,$img_name)
 {
+
     $path = \Storage::disk('public')->putFile(uploadpath(),$request->file($img_name));
     return $path;
 }
 
+
+function upload($file, $folder)
+{
+    $fileHash = str_replace('.' . $file->extension(), '', $file->hashName());
+    $fileName = $fileHash . '.' . $file->getClientOriginalExtension();
+    $path = \Storage::disk('public')->putFileAs($folder, $file, $fileName);
+    return $fileName;
+}
 
 function getLang($collection, $target)
 {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Basic;
 use App\Category;
+use App\Contact;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Activity;
@@ -18,9 +19,9 @@ class contactController extends Controller
     public function index()
     {
 
-       $categories=Category::all();
+       $contacts=Contact::all();
 
-     return view('admin.categories.index',compact('categories'));
+     return view('admin.contacts.index',compact('contacts'));
 }
     /**
      * Show the form for creating a new resource.
@@ -40,19 +41,7 @@ class contactController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
 
-        'ar_name'=>'required|string|',
-
-            'en_name'=>'required|string|',
-
-
-
-    ]);
-        $inputs = $request->all();
-        Category::create($inputs);
-        alert()->success('تم اضافة القسم بنجاح !')->autoclose(5000);
-        return back();
     }
 
     /**
@@ -74,7 +63,6 @@ class contactController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.categories.edit')->with('category',Category::find($id));
     }
 
     /**
@@ -86,29 +74,7 @@ class contactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category=Category::find($id);
 
-
-        $this->validate($request,[
-
-            'ar_name'=>'required|string|',
-            'en_name'=>'required|string|',
-
-
-
-
-
-        ]);
-
-
-        $inputs=$request->all();
-
-
-
-        $category->update($inputs);
-
-        alert()->success('تم تعديل القسم بنجاح !')->autoclose(5000);
-        return back();
     }
 
     /**
@@ -120,12 +86,12 @@ class contactController extends Controller
     public function destroy($id)
     {
 
-        $category=Category::find($id);
+        $contact=Contact::find($id);
 
 
-        $category->delete();
+        $contact->delete();
 
-        alert()->success('تم حذف القسم  بنجاح !')->autoclose(5000);
+        alert()->success('تم حذف الرسالة  بنجاح !')->autoclose(5000);
 
         return back();
     }

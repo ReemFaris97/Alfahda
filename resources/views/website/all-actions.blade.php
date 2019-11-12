@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="HandheldFriendly" content="true">
     <title> الفهدة الإنسانية </title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="shortcut icon" href="img/logo-sm.png">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="{{asset('website/css/bootstrap.min.css')}}">
+    <link rel="shortcut icon" href="{{asset('website/img/logo-sm.png')}}">
+    <link rel="stylesheet" href="{{asset('website/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('website/css/animate.css')}}">
     <!---- This for here only ---------->
     
     <!----------->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('website/css/style.css')}}">
     <!------ IE -------->
-    <script src="js/html5shiv.min.js"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="{{asset('website/js/html5shiv.min.js')}}"></script>
+    <script src="{{asset('website/js/respond.min.js')}}"></script>
 </head>
 
 
@@ -48,7 +48,7 @@
         <div class="container-fluid">
             <div class="row">
                 <a href="index.blade.php" class="logo-action">
-                    <img src="img/logo2.png">
+                    <img src="{{asset('website/img/logo2.png')}}">
                 </a>
                 <a class="back2" href="index.blade.php">
                     <h3>الصفحه السابقه</h3>

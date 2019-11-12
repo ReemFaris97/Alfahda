@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers\website;
 
+use App\Contact;
+use App\Gallery;
+use App\Member;
+use App\Partener;
+use App\Participant;
+use App\Slider;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,21 +20,19 @@ class indexController extends Controller
      */
     public function index()
     {
+        $sliders=Slider::all();
 
-
-
-
-        return view('website.index');
+        $members=Member::all();
+        $participants=Participant::all();
+        $partners=Partener::take(8)->get();
+        return view('website.index',compact('members','participants','partners','sliders'));
     }
 
 
     public function about()
     {
-
-
-
-
-        return view('website.about');
+        $members=Member::all();
+        return view('website.about',compact('members'));
     }
 
     public function contact()
@@ -36,9 +40,33 @@ class indexController extends Controller
         return view('website.contact');
     }
 
+    public function gallery()
+    {
+        $galleries=Gallery::all();
+        return view('website.gallery',compact('galleries'));
+    }
+    public function postContacts(Request $request)
+    {
+        //  dd($request->all());
+        $this->validate($request,[
+            'name'=>'required|string|max:191',
+
+            'email'=>'required|nullable|string|email|max:255|unique:contacts',
+
+
+            'phone'=>'required|string|',
+        ]);
+        $inputs=$request->all();
+
+
+        $contacts=Contact::create($inputs);
+        alert()->success('تم الإرسال بنجاح سيتم الرد عليك لاحقا')->autoclose(5000);
+        return back();
+    }
+
     public function all_actions()
     {
-        return view('website.all_actions');
+        return view('website.all-actions');
     }
     /**
      * Show the form for creating a new resource.

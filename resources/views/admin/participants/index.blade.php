@@ -1,5 +1,5 @@
 @extends('admin.layout.master')
-@section('title','إدارة شركاء النجاح  ')
+@section('title','إدارة مشاركات الفهده  ')
 
 @section('content')
 
@@ -8,13 +8,13 @@
         <div class="col-sm-12">
 
             <div class="btn-group pull-right m-t-15">
-                <a href="{{route('admin.stores.create')}}" class="btn btn-custom dropdown-toggle waves-effect waves-light">
-                   إضافة  شريك جديد
+                <a href="{{route('admin.participants.create')}}" class="btn btn-custom dropdown-toggle waves-effect waves-light">
+                   إضافة  مشاركة جديد
                     <span class="m-l-5"><i class="fa fa-plus"></i></span>
                 </a>
             </div>
 
-            <h4 class="page-title">شركاء النجاح </h4>
+            <h4 class="page-title">مشاركات  الفهده </h4>
         </div>
     </div>
     <!--End Page-Title -->
@@ -23,32 +23,32 @@
         <div class="col-sm-12">
             <div class="card-box table-responsive">
 
-                <h4 class="header-title m-t-0 m-b-30">كل شركاء النجاح</h4>
+                <h4 class="header-title m-t-0 m-b-30">كل مشاركات الفهدة</h4>
 
 
                 <table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>  صوره الشريك </th>
+                        <th>  صوره المشاركة </th>
 
                         <th style="width: 250px;" >العمليات المتاحة</th>
                     </tr>
                     </thead>
                     <tbody>
                     @php $i = 1; @endphp
-                    @foreach($partners as $row)
+                    @foreach($participants as $row)
                         <tr>
                             <td>{{$i++}}</td>
-                            <td>{{$row->ar_name}}</td>
+
 
                             <td>        <img src="{{getimg($row->image)}}" style="width:100px; height:100px">
                             </td>
 
                             <td>
-                                <a href="{{route('admin.partners.edit',$row->id)}}" class="label label-warning">تعديل</a>
+                                <a href="{{route('admin.participants.edit',$row->id)}}" class="label label-warning">تعديل</a>
                                 <a href="#"  onclick="Delete({{$row->id}})"  class="label label-danger" >حذف</a>
-                                {!!Form::open( ['route' => ['admin.partners.destroy',$row->id] ,'id'=>'delete-form'.$row->id, 'method' => 'Delete']) !!}
+                                {!!Form::open( ['route' => ['admin.participants.destroy',$row->id] ,'id'=>'delete-form'.$row->id, 'method' => 'Delete']) !!}
                                 {!!Form::close() !!}
                             </td>
                         </tr>

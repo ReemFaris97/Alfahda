@@ -71,11 +71,11 @@
             <div class="col-lg-6 col-sm-7 col-xs-0 no-padding">
                 <div class="navy">
                     <ul class="nav cf" id="ul1">
-                        <li class="active"><a href="#header">الرئيسية</a></li>
+                        <li class="active"><a href="{{url('#header')}}">الرئيسية</a></li>
                         <li><a href="{{route('website.about')}}">من نحن</a></li>
                         <li><a href="#participations">مشاركاتنا</a></li>
                         <li><a href="#actions">مبادراتنا</a></li>
-                        <li><a href="gallery.blade.php">الصور والفيديوهات</a></li>
+                        <li><a href="{{route('website.gallery')}}">الصور والفيديوهات</a></li>
                         <li><a href="{{route('website.contact')}}">اتصل بنا</a></li>
                     </ul>
                 </div>
@@ -83,8 +83,8 @@
 
             <div class="col-md-3 col-sm-3 col-xs-4 no-padding">
                 <ul class="nav-left">
-                    <li><a href="https://api.whatsapp.com/send?phone=966410545"> <span><i class="fab fa-whatsapp"></i></span> <span class="call-txt">966410545</span> </a></li>
-                    <li><a href="mailto:info@elfahdah.org"> <span><i class="far fa-envelope"></i></span> <span class="call-txt">info@elfahdah.org</span></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone={{ getsetting('phone') }}"> <span><i class="fab fa-whatsapp"></i></span> <span class="call-txt">{{ getsetting('phone') }}</span> </a></li>
+                    <li><a href="mailto:{{ getsetting('email') }}"> <span><i class="far fa-envelope"></i></span> <span class="call-txt">{{ getsetting('email') }}</span></a></li>
                 </ul>
             </div>
 
@@ -115,11 +115,11 @@
     </form>
 
     <ul class="social">
-        <li><a href="https://www.facebook.com/elfahdah/"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="https://twitter.com/elfahdah"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://www.snapchat.com/add/elfahdah"><i class="fab fa-snapchat-ghost"></i></a></li>
-        <li><a href="https://instagram.com/elfahdah?igshid=1m8svcvizh4np"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://m.youtube.com/channel/UCG9eOldL5KYi2nAo_-NWvkw"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="{{ getsetting('facebook') }}"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="{{ getsetting('twitter') }}"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="{{ getsetting('snapchat') }}"><i class="fab fa-snapchat-ghost"></i></a></li>
+        <li><a href="{{ getsetting('instagram') }}"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="{{ getsetting('youtube') }}"><i class="fab fa-youtube"></i></a></li>
     </ul>
 
     <a href="#header" class="logo-nav">
@@ -176,7 +176,7 @@
 <!------------------End partners ----------------------->
 
 
-
+@yield('scripts')
 <!----------------------------------- END ------------------------------------------>
 <script src="{{asset('website/js/classie.js')}}"></script>
 <script src="{{asset('website/js/bee3D.min.js')}}"></script>
@@ -220,7 +220,7 @@
 
 </script>
 
-@yield('scripts')
+
 </body>
 
 </html>

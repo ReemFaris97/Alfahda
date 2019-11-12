@@ -8,13 +8,13 @@
         <div class="col-sm-12">
 
             <div class="btn-group pull-right m-t-15">
-                <a href="{{route('admin.stores.create')}}" class="btn btn-custom dropdown-toggle waves-effect waves-light">
-                   إضافة  شريك جديد
+                <a href="{{route('admin.galleries.create')}}" class="btn btn-custom dropdown-toggle waves-effect waves-light">
+                   إضافة  صورة او فيديو جديد
                     <span class="m-l-5"><i class="fa fa-plus"></i></span>
                 </a>
             </div>
 
-            <h4 class="page-title">شركاء النجاح </h4>
+            <h4 class="page-title"> الصور  او الفيديوهات </h4>
         </div>
     </div>
     <!--End Page-Title -->
@@ -23,7 +23,7 @@
         <div class="col-sm-12">
             <div class="card-box table-responsive">
 
-                <h4 class="header-title m-t-0 m-b-30">كل شركاء النجاح</h4>
+                <h4 class="header-title m-t-0 m-b-30">كل الصور  او الفيديوهات </h4>
 
 
                 <table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">

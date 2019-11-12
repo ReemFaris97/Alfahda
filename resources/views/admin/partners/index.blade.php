@@ -8,7 +8,7 @@
         <div class="col-sm-12">
 
             <div class="btn-group pull-right m-t-15">
-                <a href="{{route('admin.stores.create')}}" class="btn btn-custom dropdown-toggle waves-effect waves-light">
+                <a href="{{route('admin.partners.create')}}" class="btn btn-custom dropdown-toggle waves-effect waves-light">
                    إضافة  شريك جديد
                     <span class="m-l-5"><i class="fa fa-plus"></i></span>
                 </a>
@@ -40,7 +40,7 @@
                     @foreach($partners as $row)
                         <tr>
                             <td>{{$i++}}</td>
-                            <td>{{$row->ar_name}}</td>
+
 
                             <td>        <img src="{{getimg($row->image)}}" style="width:100px; height:100px">
                             </td>
