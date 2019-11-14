@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <!------- This for here only --------->
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bee3D.min.css">
+    <link rel="stylesheet" href="css/demo.css">
     <!---------------------->
     <link rel="stylesheet" href="css/style.css">
     <!------ IE -------->
@@ -72,7 +74,7 @@
                             <li><a href="index.html#participations">مشاركاتنا</a></li>
                             <li><a href="index.html#actions">مبادراتنا</a></li>
                             <li class="active"><a href="#">الصور والفيديوهات</a></li>
-                            <li><a href="contact.html">اتصل بنا</a></li>
+                            <li><a href="contact.html">إنضم إلينا</a></li>
                         </ul>
                     </div>
                 </div>
@@ -108,105 +110,278 @@
     <!-------- Start gallery ------>
     <section class="gallery all-sections">
         <div class="container">
-            <h2 class="title">مكتبة الصور والفيديوهات</h2>
-
             <div class="grid">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a class="btn-3" data-toggle="pill" href="#images">
+                            <span> الصور </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-3" data-toggle="pill" href="#video">
+                            <span> الفيديوهات</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="images" class="tab-pane fade in active">
+                        <section class="action-in">
+                            <article class="cube3">
+                                <section class="bee3D--slide">
+                                    <div class="bee3D--inner">
+                                        <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape1.png">
+                                            <span class="view"><i class="far fa-eye"></i></span>
+                                            <img src="img/shape1.png">
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="bee3D--slide">
+                                    <div class="bee3D--inner">
+                                        <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape2.jpg">
+                                            <span class="view"><i class="far fa-eye"></i></span>
+                                            <img src="img/shape2.jpg">
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="bee3D--slide">
+                                    <div class="bee3D--inner">
+                                        <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape3.jpg">
+                                            <span class="view"><i class="far fa-eye"></i></span>
+                                            <img src="img/shape3.jpg">
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="bee3D--slide">
+                                    <div class="bee3D--inner">
+                                        <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape5.jpg">
+                                            <span class="view"><i class="far fa-eye"></i></span>
+                                            <img src="img/shape5.jpg">
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="bee3D--slide">
+                                    <div class="bee3D--inner">
+                                        <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape6.jpg">
+                                            <span class="view"><i class="far fa-eye"></i></span>
+                                            <img src="img/shape6.jpg">
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="bee3D--slide">
+                                    <div class="bee3D--inner">
+                                        <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape7.jpg">
+                                            <span class="view"><i class="far fa-eye"></i></span>
+                                            <img src="img/shape7.jpg">
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="bee3D--slide">
+                                    <div class="bee3D--inner">
+                                        <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape3.jpg">
+                                            <span class="view"><i class="far fa-eye"></i></span>
+                                            <img src="img/shape3.jpg">
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="bee3D--slide">
+                                    <div class="bee3D--inner">
+                                        <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape5.jpg">
+                                            <span class="view"><i class="far fa-eye"></i></span>
+                                            <img src="img/shape5.jpg">
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="bee3D--slide">
+                                    <div class="bee3D--inner">
+                                        <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape2.jpg">
+                                            <span class="view"><i class="far fa-eye"></i></span>
+                                            <img src="img/shape2.jpg">
+                                        </a>
+                                    </div>
+                                </section>
+                                <!-- Navigation Arrows -->
+                                <span class="bee3D--nav bee3D--nav__prev"> <i class='fas fa-angle-left'> </i></span>
+                                <span class="bee3D--nav bee3D--nav__next"> <i class='fas fa-angle-right'> </i> </span>
+                            </article>
+                        </section>
+                    </div>
+                    <div id="video" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <a class="partici1 grid-item grid-item--width2" href="img/mb/mb11.jpg" data-fancybox="Gallery">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <video controls poster="img/shape4.jpg" preload="none">
+                                        <source src="img/mb/mb11.jpg" type="video/mp4">
+                                        Your browser does not support the video tag.</video>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <a class="partici1 grid-item grid-item--width2" href="img/mb/mb8.jpg" data-fancybox="Gallery">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <video controls poster="img/shape4.jpg" preload="none">
+                                        <source src="img/mb/mb8.jpg" type="video/mp4">
+                                        Your browser does not support the video tag.</video>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <a class="partici1 grid-item grid-item--width2" href="img/mb/mb11.jpg" data-fancybox="Gallery">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <video controls poster="img/shape4.jpg" preload="none">
+                                        <source src="img/mb/mb11.jpg" type="video/mp4">
+                                        Your browser does not support the video tag.</video>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <a class="partici1 grid-item grid-item--width2" href="img/mb/mb8.jpg" data-fancybox="Gallery">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <video controls poster="img/shape4.jpg" preload="none">
+                                        <source src="img/mb/mb8.jpg" type="video/mp4">
+                                        Your browser does not support the video tag.</video>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <a class="partici1 grid-item grid-item--width2" href="img/mb/mb11.jpg" data-fancybox="Gallery">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <video controls poster="img/shape4.jpg" preload="none">
+                                        <source src="img/mb/mb11.jpg" type="video/mp4">
+                                        Your browser does not support the video tag.</video>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <a class="partici1 grid-item grid-item--width2" href="img/mb/mb8.jpg" data-fancybox="Gallery">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <video controls poster="img/shape4.jpg" preload="none">
+                                        <source src="img/mb/mb8.jpg" type="video/mp4">
+                                        Your browser does not support the video tag.</video>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <a class="partici1 grid-item grid-item--width2" href="img/mb/mb11.jpg" data-fancybox="Gallery">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <video controls poster="img/shape4.jpg" preload="none">
+                                        <source src="img/mb/mb11.jpg" type="video/mp4">
+                                        Your browser does not support the video tag.</video>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <a class="partici1 grid-item grid-item--width2" href="img/mb/mb8.jpg" data-fancybox="Gallery">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <video controls poster="img/shape4.jpg" preload="none">
+                                        <source src="img/mb/mb8.jpg" type="video/mp4">
+                                        Your browser does not support the video tag.</video>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <a class="partici1 grid-item grid-item--width2" href="img/mb/mb11.jpg" data-fancybox="Gallery">
+                                    <span class="view"><i class="far fa-eye"></i></span>
+                                    <video controls poster="img/shape4.jpg" preload="none">
+                                        <source src="img/mb/mb11.jpg" type="video/mp4">
+                                        Your browser does not support the video tag.</video>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+
                 <a class="partici1 grid-item static-banner" href="img/images/img9.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img9.jpg">
                 </a>
                 <a class="partici1 grid-item grid-item--width2" href="img/images/img8.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img8.jpg">
                 </a>
                 <a class="partici1 grid-item grid-item--height2" href="img/images/img7.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img7.jpg">
                 </a>
-                
+
                 <a class="partici1 grid-item grid-item--height2" href="img/images/img6.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img6.jpg">
                 </a>
-                
+
                 <a class="partici1 grid-item grid-item--width2" href="img/mb/mb11.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
-                    <video controls poster="img/shape4.jpg"  preload="none">
-                    <source src="img/mb/mb11.jpg" type="video/mp4">
-                    Your browser does not support the video tag.</video>
+                    <span class="view"><i class="far fa-eye"></i></span>
+                    <video controls poster="img/shape4.jpg" preload="none">
+                        <source src="img/mb/mb11.jpg" type="video/mp4">
+                        Your browser does not support the video tag.</video>
                 </a>
                 <a class="partici1 grid-item grid-item--height2" href="img/images/img5.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img5.jpg">
                 </a>
-                
+
                 <a class="partici1 grid-item grid-item--height2" href="img/images/img4.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img4.jpg">
                 </a>
                 <a class="partici1 grid-item static-banner" href="img/images/img3.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img3.jpg">
                 </a>
                 <a class="partici1 grid-item grid-item--height2" href="img/images/img2.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img2.jpg">
                 </a>
-                
+
                 <a class="partici1 grid-item grid-item--height2" href="img/images/img1.jpg" data-fancybox="Gallery">
-                <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img1.jpg">
                 </a>
-                
+
                 <a class="partici1 grid-item grid-item--height2" href="img/shape5.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/shape5.jpg">
                 </a>
-                
+
                 <a class="partici1 grid-item grid-item--height2" href="img/images/img10.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/images/img10.jpg">
                 </a>
-                
+
                 <a class="partici1 grid-item grid-item--width2" href="img/mb/mb8.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
-                    <video controls poster="img/shape4.jpg"  preload="none">
-                    <source src="img/mb/mb8.jpg" type="video/mp4">
-                    Your browser does not support the video tag.</video>
+                    <span class="view"><i class="far fa-eye"></i></span>
+                    <video controls poster="img/shape4.jpg" preload="none">
+                        <source src="img/mb/mb8.jpg" type="video/mp4">
+                        Your browser does not support the video tag.</video>
                 </a>
                 <a class="partici1 grid-item grid-item--height2" href="img/shape6.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/shape6.jpg">
                 </a>
-                
+
                 <a class="partici1 grid-item grid-item--height2" href="img/shape7.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/shape7.jpg">
                 </a>
                 <a class="partici1 grid-item static-banner" href="img/shape3.jpg" data-fancybox="Gallery">
-                    <span class="view"><i class="far fa-eye"></i></span> 
+                    <span class="view"><i class="far fa-eye"></i></span>
                     <img src="img/shape3.jpg">
                 </a>
-                
+-->
             </div>
-
         </div>
     </section>
     <!-------- End gallery ------>
-    
-    
-    
+
+
+
     <!-------- Start PAgination ------>
+    <!--
     <div class="pagination">
-      <a href="#"><i class='fas fa-angle-left'> </i> </a>
-      <a href="#">1</a>
-      <a href="#" class="active">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-      <a href="#">5</a>
-      <a href="#">6</a>
-      <a href="#"> <i class='fas fa-angle-right'> </i>  </a>
+        <a href="#"><i class='fas fa-angle-left'> </i> </a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#"> <i class='fas fa-angle-right'> </i> </a>
     </div>
+-->
     <!-------- End PAgination ------>
 
 
@@ -261,13 +436,17 @@
     <!----------------- These for here Only ----------------->
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <!--
     <script>
         $('.grid').masonry({
-          // options
-          itemSelector: '.grid-item',
-          columnWidth: 200
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 200
         });
+
     </script>
+-->
+
     <!----------------------------------- END ------------------------------------------>
 
 
@@ -276,6 +455,22 @@
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();
+
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/bee3D.min.js"></script>
+    <script>
+        var element = document.querySelector('.cube3');
+
+        var slider = new Bee3D(element, {
+            effect: 'cube',
+            listeners: {
+                keys: true
+            },
+            navigation: {
+                enabled: true
+            }
+        });
 
     </script>
 

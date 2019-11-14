@@ -8,6 +8,7 @@
     <meta name="HandheldFriendly" content="true">
     <title> الفهدة الإنسانية </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datedropper.min.css">
     <link rel="shortcut icon" href="img/logo-sm.png">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -67,7 +68,7 @@
                             <li><a href="index.html#participations">مشاركاتنا</a></li>
                             <li><a href="index.html#actions">مبادراتنا</a></li>
                             <li><a href="gallery.html">الصور والفيديوهات</a></li>
-                            <li class="active"><a href="#">اتصل بنا</a></li>
+                            <li class="active"><a href="#">إنضم إلينا</a></li>
                         </ul>
                     </div>
                 </div>
@@ -93,7 +94,7 @@
     <section class="breadcrumbs">
         <div class="titles">
             <a href="index.html">الرئيسية</a> /
-            <h3>اتصل بنا</h3>
+            <h3>إنضم إلينا</h3>
         </div>
     </section>
     <!-------- End breadcrumbs ------>
@@ -101,58 +102,365 @@
 
 
     <!-------- Start About ------>
+
+
+
     <section class="contact all-sections">
         <div class="container">
-            <h2 class="title green">اتصل بنا</h2>
+            <h2 class="title green">إنضم إلينا</h2>
+            <ul class="nav nav-pills">
+                <li>
+                    <a class="btn-3" data-toggle="pill" href="#add">
+                        <span> إنضم لنا كراعى </span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a class="btn-3 " data-toggle="pill" href="#add2">
+                        <span> مقترح</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-3" data-toggle="pill" href="#add3">
+                        <span> إنضم لنا كمتطوع</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="add" class="tab-pane fade in active">
+                    <form action="#" class="contact-form form1">
+                        <div class="row">
 
+                            <div class="col-sm-6 col-xs-12 ">
+                                <div class="input-block">
+                                    <label for="">الاسم / الجهة</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
 
-            <form action="#" class="contact-form form1">
-                <div class="row">
+                            <div class="col-sm-6 col-xs-12 ">
+                                <div class="input-block">
+                                    <label for="">المدينه</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
 
-                    <div class="col-sm-6 col-xs-12 wow slideInRight">
-                        <div class="input-block">
-                            <label for="">الاسم</label>
-                            <input type="text" class="form-control">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block">
+                                    <label for="">رقم الجوال</label>
+                                    <input type="number" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block">
+                                    <label for="">البريد الإلكترونى</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class=" col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">تويتر</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block textarea">
+                                    <label for="">نبذة عنكم ...</label>
+                                    <textarea rows="3" type="text" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block textarea">
+                                    <label for="">خدماتكم المقدمة للفهدة الإنسانية ...</label>
+                                    <textarea rows="3" type="text" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <button class="btn-3" type="submit">
+                                    <span> ارسال </span>
+                                </button>
+                            </div>
+
                         </div>
-                    </div>
-
-                    <div class="col-sm-6 col-xs-12 wow slideInLeft">
-                        <div class="input-block">
-                            <label for="">البريد الإلكترونى</label>
-                            <input type="email" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-xs-12 wow slideInRight">
-                        <div class="input-block">
-                            <label for="">رقم الجوال</label>
-                            <input type="number" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-xs-12 wow slideInLeft">
-                        <div class="input-block">
-                            <label for="">عنوان الرسالة</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 wow slideInUp">
-                        <div class="input-block textarea">
-                            <label for="">اكتب رسالتك..</label>
-                            <textarea rows="3" type="text" class="form-control"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12">
-                        <button class="btn-3" type="submit">
-                            <span> ارسال </span>
-                        </button>
-                    </div>
-
+                    </form>
                 </div>
-            </form>
+                <div id="add2" class="tab-pane fade">
+                    <form action="#" class="contact-form form1">
+                        <div class="row">
 
+                            <div class="col-sm-6 col-xs-12 ">
+                                <div class="input-block">
+                                    <label for="">الاسم</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12 ">
+                                <div class="input-block">
+                                    <label for="">البريد الإلكترونى</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block">
+                                    <label for="">رقم الجوال</label>
+                                    <input type="number" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block">
+                                    <label for="">عنوان الرسالة</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="input-block textarea">
+                                    <label for="">اكتب رسالتك..</label>
+                                    <textarea rows="3" type="text" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <button class="btn-3" type="submit">
+                                    <span> ارسال </span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div id="add3" class="tab-pane fade">
+                    <form action="#" class="contact-form form1">
+                        <div class="row">
+
+                            <div class="col-xs-12 ">
+                                <div class="input-block img-input">
+                                    <p>صوره شخصيه</p>
+                                    <div>
+                                    <input id="myimg" type="file" onchange="readURL(this);" />
+                                    <img id="blah" src="img/shape6.jpg" alt="your image" />
+                                    <label for="myimg"><i class="fas fa-plus"></i></label>
+                                    </div>    
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12 ">
+                                <div class="input-block">
+                                    <label for="">الاسم الرباعي</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label class="label-date"> (تاريخ الميلاد (اليوم /التاريخ / السنه)</label>
+                                    <input type="text" class="form-control date">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block">
+                                    <label for="">الجنسية</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6  col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">رقم الهوية</label>
+                                    <input type="number" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">الجنس</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">الحالة الاجتماعية</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <label>بيانات التواصل</label>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">المدينة</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">الحي</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">رقم الجوال</label>
+                                    <input type="number" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">البريد الالكتروني</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">التويتر</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <label>البيانات العلمية والعمليه</label>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for=""> المؤهل العلمي</label>
+                                    <select class="form-control">
+                                        <option>ابتدائي</option>
+                                        <option>متوسط</option>
+                                        <option>ثانوي</option>
+                                        <option>جامعي </option>
+                                        <option>دراسات عليا</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">التخصص</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for=""> اللغات</label>
+                                    <select class="form-control">
+                                        <option>انجليزي </option>
+                                        <option>فرنسي</option>
+                                        <option>صيني </option>
+                                        <option>اخرى </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for=""> الوضع الحالي</label>
+                                    <select class="form-control">
+                                        <option>طالب </option>
+                                        <option>متخرج</option>
+                                        <option>موظف حكومي </option>
+                                        <option>موظف قطاع خاص </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">جهة العمل</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">المسمى الوظيفي</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <label>مقياس المهارات</label>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">كيف عرفت عن الفهدة الإنسانية ؟</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">لماذا ترغب في التطوع في الفهده الإنسانية؟</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <label>مقياس المهارات</label>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">ماهي خبراتك السابقه في التطوع ؟</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for="">ماهي إنجازاتك على المستوى الشخصي أو أهدافك القادمة ؟</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for=""> الفئات التي تفضل التطوع فيها</label>
+                                    <select class="form-control">
+                                        <option>أطفال ذوي الاعاقه </option>
+                                        <option>أطفال فئة الداون_أطفال محاربي السرطان </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for=""> المجالات التي تفضل التطوع فيها</label>
+                                    <select class="form-control">
+                                        <option>مبادرة زيارة الفهدة </option>
+                                        <option>مبادرة نبض الرياضية</option>
+                                        <option>مبادرة دريمز</option>
+                                        <option> مبادرة تيك كيدز</option>
+                                        <option>مبادرة اقتفي</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <label>معلومات إضافية تريد أن نعرفها عنك</label>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for=""> بيانات التفرغ</label>
+                                    <select class="form-control">
+                                        <option>وسط الأسبوع</option>
+                                        <option>نهاية الأسبوع</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="input-block ">
+                                    <label for=""> وقت التفرغ</label>
+                                    <select class="form-control">
+
+                                        <option>صباحي</option>
+                                        <option>مسائي</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button class="btn-3" type="submit">
+                                        <span> ارسال </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
     <!-------- End About ------>
@@ -166,7 +474,7 @@
             <button type="submit" class="send"> <i class="fas fa-long-arrow-alt-right"></i> </button>
         </form>
 
-         <ul class="social">
+        <ul class="social">
             <li><a href="https://www.facebook.com/elfahdah/"><i class="fab fa-facebook"></i></a></li>
             <li><a href="https://twitter.com/elfahdah"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://www.snapchat.com/add/elfahdah"><i class="fab fa-snapchat-ghost"></i></a></li>
@@ -206,6 +514,7 @@
     <script src="js/script.js"></script>
 
     <!----------------------- This for here only ---------------------->
+
     <script>
         //material contact form animation
         $('.contact-form').find('.form-control').each(function() {
@@ -235,14 +544,54 @@
         })
 
     </script>
+    <script>
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+    </script>
     <!--------------------------------------------------->
     <script src="js/wow.min.js"></script>
+    <script src="js/datedropper.min.js"></script>
     <script>
         new WOW().init();
+        $(document).ready(function() {
+            $(".date").dateDropper();
+        })
+
+    </script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#blah')
+                        .attr('src', e.target.result)   
+                        
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 
     </script>
 
 </body>
 
 </html>
-
