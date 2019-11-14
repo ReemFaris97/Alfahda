@@ -52,9 +52,9 @@
 
 
                             <td>
-                                <a href="{{route('admin.members.edit',$row->id)}}" class="label label-warning">تعديل</a>
+                                <a href="{{route('admin.ambassadors.edit',$row->id)}}" class="label label-warning">تعديل</a>
                                 <a href="#"  onclick="Delete({{$row->id}})"  class="label label-danger" >حذف</a>
-                                {!!Form::open( ['route' => ['admin.members.destroy',$row->id] ,'id'=>'delete-form'.$row->id, 'method' => 'Delete']) !!}
+                                {!!Form::open( ['route' => ['admin.ambassadors.destroy',$row->id] ,'id'=>'delete-form'.$row->id, 'method' => 'Delete']) !!}
                                 {!!Form::close() !!}
                             </td>
                         </tr>

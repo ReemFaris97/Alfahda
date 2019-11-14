@@ -11,8 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('auth.login');
+});
+Route::get('/', function () {
+    return view('website.index');
 });
 
 Auth::routes();
@@ -34,7 +37,7 @@ Route::group(array('prefix' => 'dashboard','as'=>'admin.','middleware'=>'auth','
     Route::resource('settings', 'SettingController');
 });
 
-Route::group(array('as'=>'website.','middleware'=>'auth','namespace' => 'website'), function() {
+Route::group(array('as'=>'website.','namespace' => 'website'), function() {
     Route::get('/', 'indexController@index')->name('index');
     Route::get('/about', 'indexController@about')->name('about');
     Route::get('/contact', 'indexController@contact')->name('contact');
@@ -42,6 +45,8 @@ Route::group(array('as'=>'website.','middleware'=>'auth','namespace' => 'website
     Route::get('/gallery', 'indexController@gallery')->name('gallery');
     Route::get('/all-actions', 'indexController@all_actions')->name('all-actions');
 
+    Route::get('/action/{id}', 'indexController@action')->name('action');
+    Route::get('/sofra-singel/{id}', 'indexController@sofra_singel')->name('sofra-singel');
 
     Route::post('/contacts', 'indexController@postContacts')->name('Contacts');
 

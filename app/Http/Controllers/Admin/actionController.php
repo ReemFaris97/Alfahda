@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Action;
+use App\ActionImage;
 use App\Basic;
 use App\Category;
 use App\User;
@@ -53,8 +54,25 @@ class actionController extends Controller
 
 
     ]);
+
+        $image = uploader($request, 'image');
+
+
         $inputs = $request->all();
-        Action::create($inputs);
+        $inputs['image'] = $image;
+
+       $action= Action::create($inputs);
+
+        if($request->hasFile('images')) {
+            foreach ($request['images'] as $key => $item) {
+                $imageName = \Storage::disk('public')->putFile('photos', $item);
+                $action_image = new ActionImage();
+                $action_image->action_id = $action->id;
+                $action_image->image = $imageName;
+                $action_image->save();
+            }
+        }
+
         alert()->success('تم اضافة المبادره بنجاح !')->autoclose(5000);
         return back();
     }
@@ -107,10 +125,13 @@ class actionController extends Controller
 
 
         $inputs=$request->all();
+        if($request->hasFile('image')) {
+            $image = uploader($request, 'image');
 
-
-
+            $inputs['image'] = $image;
+        }
         $action->update($inputs);
+
 
         alert()->success('تم تعديل المبادرة بنجاح !')->autoclose(5000);
         return back();

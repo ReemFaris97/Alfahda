@@ -8,7 +8,7 @@ class Ambassador extends Model
 {
 
     protected $fillable = [
-    'name','goals','message','diagnosis','image'
+    'name','goals','message','diagnosis','image','mother_message'
     ];
 
 

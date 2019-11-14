@@ -22,50 +22,15 @@
     <!-------- Start About ------>
     <section class="about all-sections right-text">
         <div class="container">
-            <h2 class="title green">مبادرة دريمز </h2>
+            <h2 class="title green">{{$action->name}} </h2>
 
-            <p>
-                <span class="inner-title">تعريف عام :</span>
-                (دريمز ) الفهدة
-                مبادرة تتيح لجميع أفراد المجتمع المساهمة في تحقيق أماني الأطفال ذوي الإعاقة والداون ومحاربي السرطان ودعمهم معنوياً
-                انطلقت منذ عام ٢٠١٨م
-
-
-                <span class="inner-title">الرؤية :</span>
-                التأثير الإيجابي برفع الروح المعنوية لدى المرضى من الأطفال .
-
-
-                <span class="inner-title">الرسالة:</span>
-
-                تلاحم المجتمع ومساهمته بالتعاون مع الأطفال المرضى وإنارة قلوبهم بالأمل والتفاؤل .
-                <span class="inner-title">الهدف :</span>
-
-                المشاركة المجتمعية لتقديم ما يمكن تقديمه لتحقيق أماني الأطفال من ذوي الإعاقة والداون ومحاربي السرطان .
-
-                <span class="inner-title">فئة الأطفال المستهدفة :</span>
-
-                ذوي الإعاقة
-                <br />
-                متلازمة الداون 
-                <br />
-                محاربي السرطان 
-                <br /> 
-                <span class="inner-title">الألية :</span>
-
-- اعلان الأمنية بحسابات الفهدة الإنسانية .                <br />
-- حجز الأمنية لمن يريد تحقيقها عبر الخاص .                <br />
-- التنسيق بين الأطراف المعنية حتى يتم تحقيقها .                <br />
-- بعد تحقيق الأمنية يتم الإعلان بحسابات الفهدة الإنسانية               <br />
-                
-                    <span class="inner-title">ملاحظة :</span>
-
-مبادرة دريمز الفهدة " لا تستقبل المبالغ المالية قطعاً "
-                
-            </p>
+           {!! $action->description !!}
 
         </div>
     </section>
     <!-------- End About ------>
+
+@if (isset($action->images))
 
 
     <!-------- Start action-imgs ------>
@@ -75,86 +40,17 @@
 
             <section class="action-in">
                 <article class="cube1">
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape1.png">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape1.png">
-                            </a>
-                        </div>
-                    </section>
 
+                    @foreach($action->images as $image)
                     <section class="bee3D--slide">
                         <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape2.jpg">
+                            <a class="partici1 demo-text" data-fancybox="Actions" href="{{getimg($image->imge)}}">
                                 <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape2.jpg">
+                                <img src="{{getimg($image->image)}}">
                             </a>
                         </div>
                     </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape3.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape3.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape5.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape5.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape6.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape6.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape7.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape7.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape3.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape3.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape5.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape5.jpg">
-                            </a>
-                        </div>
-                    </section>
-
-                    <section class="bee3D--slide">
-                        <div class="bee3D--inner">
-                            <a class="partici1 demo-text" data-fancybox="Actions" href="img/shape2.jpg">
-                                <span class="view"><i class="far fa-eye"></i></span>
-                                <img src="img/shape2.jpg">
-                            </a>
-                        </div>
-                    </section>
+                 @endforeach
 
 
                     <!-- Navigation Arrows -->
@@ -167,7 +63,7 @@
         </div>
     </section>
     <!-------- End action-imgs ------>
-
+@endif
 @stop
 @section('scripts')
 

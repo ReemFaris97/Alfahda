@@ -71,13 +71,26 @@
             <div class="col-lg-6 col-sm-7 col-xs-0 no-padding">
                 <div class="navy">
                     <ul class="nav cf" id="ul1">
-                        <li class="active"><a href="{{url('#header')}}">الرئيسية</a></li>
-                        <li><a href="{{route('website.about')}}">من نحن</a></li>
-                        <li><a href="#participations">مشاركاتنا</a></li>
-                        <li><a href="#actions">مبادراتنا</a></li>
-                        <li><a href="{{route('website.gallery')}}">الصور والفيديوهات</a></li>
-                        <li><a href="{{route('website.contact')}}">اتصل بنا</a></li>
-                    </ul>
+                        @if (Request::is('/') )
+
+                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="#header">الرئيسية</a></li>
+                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
+                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="#participations">مشاركاتنا</a></li>
+                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="#actions">مبادراتنا</a></li>
+                            <li class="{{(Request::is('/gallery') ? 'active' : '')}}"><a href="{{route('website.gallery')}}">الصور والفيديوهات</a></li>
+                            <li class="{{(Request::is('/contact') ? 'active' : '')}}"><a href="{{route('website.contact')}}">اتصل بنا</a></li>
+@else
+
+
+                            <li class="{{(Request::is('/') ? 'active' : '')}}><a href="{{route('website.index')}}#header">الرئيسية</a></li>
+                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
+                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#participations">مشاركاتنا</a></li>
+                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#actions">مبادراتنا</a></li>
+                            <li class="{{(Request::is('/gallery') ? 'active' : '')}}"><a href="{{route('website.gallery')}}">الصور والفيديوهات</a></li>
+                            <li class="{{(Request::is('/contact') ? 'active' : '')}}"><a href="{{route('website.contact')}}">اتصل بنا</a></li>
+
+                        @endif
+                                  </ul>
                 </div>
             </div>
 

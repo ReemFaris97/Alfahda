@@ -59,6 +59,15 @@
 @endif
 
 
+<div class="clearfix"></div>
+<div class="col-sm-12 col-xs-12  pull-left">
+    <div class="form-group form-float">
+        <label class="form-label"> رسالة الام </label>
+        <div class="form-line">
+            {!! Form::textarea("mother_message",null,['class'=>'form-control editor'])!!}
+        </div>
+    </div>
+</div>
 
 
 
@@ -66,3 +75,21 @@
     <button class="btn btn-primary waves-effect" type="submit">حفظ</button>
 </div>
 
+
+@section('scripts')
+
+
+
+    {!! Html::script('/admin/ckeditor/ckeditor.js') !!}
+
+    <script>
+
+        $(document).ready(function () {
+
+            CKEDITOR.replaceClass = 'editor';
+
+        });
+
+    </script>
+
+@endsection

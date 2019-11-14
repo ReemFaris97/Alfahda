@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\website;
 
+use App\Action;
+use App\Ambassador;
 use App\Contact;
 use App\Gallery;
 use App\Member;
@@ -21,11 +23,11 @@ class indexController extends Controller
     public function index()
     {
         $sliders=Slider::all();
-
+        $actions=Action::all();
         $members=Member::all();
         $participants=Participant::all();
         $partners=Partener::take(8)->get();
-        return view('website.index',compact('members','participants','partners','sliders'));
+        return view('website.index',compact('members','participants','partners','sliders','actions'));
     }
 
 
@@ -39,6 +41,37 @@ class indexController extends Controller
     {
         return view('website.contact');
     }
+
+    public function sofra_singel($id){
+
+        $ambosdador=Ambassador::find($id);
+
+        return view('website.sofra-singel',compact('ambosdador'));
+    }
+
+    public function action($id)
+    {
+
+        $action=Action::find($id);
+        $ambosdadors=Ambassador::all();
+        if ($action->type=="coming_soon")
+        {
+            return view('website.action3',compact('action'));
+        }elseif($action->type=="desc")
+        {
+
+            return view('website.action2',compact('action'));
+        }else
+        {
+            return view('website.action4',compact('action','ambosdadors'));
+        }
+
+
+
+    }
+
+
+
 
     public function gallery()
     {
