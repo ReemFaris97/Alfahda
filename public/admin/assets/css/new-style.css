@@ -47,10 +47,7 @@ div#wrapper {
     z-index: 9;
 }
 /************************************** Start Login *****************************************/
-.wrapper-page .m-t-40 > .text-center {
-    background-image: url(../images/logo.png);
-    background-size: 180px;
-}
+
 .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .btn-custom.focus, .btn-custom:active, .btn-custom:focus, .btn-custom:hover, .open > .dropdown-toggle.btn-custom {
     border: 2px solid #F5CB14 !important;
 }
@@ -63,7 +60,7 @@ background-size: contain !important;
     background-color: rgba(116, 115, 115, 0.6);
 }
 h4.text-uppercase.font-bold.m-b-0 {
-    padding-top: 127px;
+    padding-top: 160px;
 }
 /************************************** End Login *****************************************/
 
