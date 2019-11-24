@@ -49,7 +49,7 @@
                     <div class="item">
                         <img src="{{getimg($slider->image)}}" class="shape">
                         <div class="slider-caption right">
-                            <span class="big-font animated wow">{{$slider->text}}</span>
+                            <span class="big-font animated wow"></span>
                             <span class="small-font animated wow">
                             <nav>
                                 <ul>

@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="{{asset('website/img/logo-sm.png')}}">
     <link rel="stylesheet" href="{{asset('website/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('website/css/animate.css')}}">
+
+    <link rel="stylesheet" href="{{asset('website/css/datedropper.min.css')}}">
     <!---- This for here only ---------->
     <link rel="stylesheet" href="{{asset('website/css/jquery.fancybox.min.css')}}">
     <link rel="stylesheet" href="{{asset('website/css/owl.theme.default.min.css')}}">

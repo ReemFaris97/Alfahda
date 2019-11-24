@@ -50,6 +50,10 @@ Route::group(array('as'=>'website.','namespace' => 'website'), function() {
 
     Route::post('/contacts', 'indexController@postContacts')->name('Contacts');
 
+    Route::post('/volunteers', 'indexController@volunteers')->name('volunteers');
+
+    Route::post('/keepers', 'indexController@keepers')->name('keepers');
+
 
 });
 

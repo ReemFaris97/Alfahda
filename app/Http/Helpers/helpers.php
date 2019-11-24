@@ -191,6 +191,11 @@ function getLang($collection, $target)
  */
 
 
+function fileUploader($file){
+    return Storage::disk('public')->putFile('files',$file);
+}
+
+
 function deleteImg($img_name)
 {
     \Storage::disk('public')->delete(uploadpath(), $img_name);
