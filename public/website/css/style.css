@@ -297,6 +297,7 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-transform: translateX(0px) !important;
     -ms-transform: translateX(0px) !important;
     -o-transform: translateX(0px) !important;
+    height: 100%;
 }
 
 .col-xs-1,
@@ -792,8 +793,8 @@ ul.nav > li:after {
 #owl-main.owl-carousel .owl-item video {
     height: calc(100vh - 180px);
     width: 100%;
-    object-fit: cover;
-    object-position: top
+    object-fit: unset;
+/*    object-position: top*/
 }
 
 @media(min-width:768px) {
@@ -2035,7 +2036,9 @@ span.hidden-control {
 
 @media (max-width: 1024px) {
     /*************************************************** Start  ****************************************************/
-
+    ul.nav > li {
+        padding: 0 8px;
+    }
     /*************************************************** End  ****************************************************/
 
 }

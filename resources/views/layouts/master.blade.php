@@ -57,7 +57,7 @@
     <div class="">
         <div class="row">
 
-            <div class="col-lg-3 col-sm-2 col-xs-8 no-padding">
+            <div class="col-lg-2 col-sm-2 col-xs-8 no-padding">
                 <div class="right-one">
                     <div id="nav-icon1">
                         <span></span>
@@ -70,7 +70,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-sm-7 col-xs-0 no-padding">
+            <div class="col-lg-8 col-sm-7 col-xs-0 no-padding">
                 <div class="navy">
                     <ul class="nav cf" id="ul1">
                         @if (Request::is('/') )
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-3 col-xs-4 no-padding">
+            <div class="col-md-2 col-sm-3 col-xs-4 no-padding">
                 <ul class="nav-left">
                     <li><a href="https://api.whatsapp.com/send?phone={{ getsetting('phone') }}"> <span><i class="fab fa-whatsapp"></i></span> <span class="call-txt">{{ getsetting('phone') }}</span> </a></li>
                     <li><a href="mailto:{{ getsetting('email') }}"> <span><i class="far fa-envelope"></i></span> <span class="call-txt">{{ getsetting('email') }}</span></a></li>

@@ -8,22 +8,22 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #F5CB14;
+    background-color: #d3b063;
     outline: 1px solid #fff;
     border-radius: 30px
 }
 
 ::-moz-selection {
-    background: #F5CB14;
+    background: #42a283;
     color: #fff
 }
 
 ::selection {
-    background: #F5CB14;
+    background: #42a283;
     color: #fff
 }
 body.widescreen {
-    background-color: rgb(248, 212, 4);
+    background-color: rgba(221, 221, 221, .6);
 }
 body.fixed-left.widescreen {
     background-color: #ddd;
@@ -34,41 +34,211 @@ body.fixed-left.widescreen:after{
     content: "";
     position: absolute;
     left: 26px;
-    bottom: 45px;
-    background-image: url('../images/before2.png');
+    bottom: 70px;
+    background-image: url(../images/logo2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 div#wrapper {
     position: absolute;
     z-index: 9;
 }
+.lds-facebook div {
+    background: #42a283;
+}
 /************************************** Start Login *****************************************/
-
-.btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .btn-custom.focus, .btn-custom:active, .btn-custom:focus, .btn-custom:hover, .open > .dropdown-toggle.btn-custom {
-    border: 2px solid #F5CB14 !important;
+.wrapper-page {
+    margin: 8% auto;
+}
+.wrapper-page .card-box {
+    box-shadow: 0 0px 25px 0 rgb(211, 176, 99), 0 10px 0px 0 rgba(0, 0, 0, 0.002);
+    position: relative;
+}
+.wrapper-page .card-box:before{
+    content: "";
+    background-image: url('../images/pattern.png');
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrapper-page .card-box:after{
+    content: "";
+    background-image: url('../images/pattern.png');
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.btn-bordred.btn-custom:hover, .btn-bordred.btn-custom:focus, .btn-bordred.btn-custom:active, .btn-bordred.btn-custom.active, .btn-bordred.btn-custom.focus, .btn-bordred.btn-custom:active, .btn-bordred.btn-custom:focus, .btn-bordred.btn-custom:hover, .open > .dropdown-toggle.btn-custom {
+    border: 1px solid #3f987c !important;
+    background-color: #3f987c !important;
 }
 .account-pages {
-    background-image: url('../images/login1.jpg') !important;
-background-size: contain !important;
+    background-image: url(../images/shape23.jpg) !important;
+    background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-position: bottom center !important}
+    background-position: center !important;
+}
 .account-pages:before {
-    background-color: rgba(116, 115, 115, 0.6);
+    background-color: rgba(62, 60, 60, 0.6);
 }
 h4.text-uppercase.font-bold.m-b-0 {
     padding-top: 160px;
 }
+.btn-bordred.btn-custom {
+    background-color: #d3b063 !important;
+    border: 1px solid #d3b063 !important;
+    border-bottom: 1px solid #d3b063 !important;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+    outline: 0;
+    outline: 0;
+    outline-offset: 0;
+}
+.form-control:hover, .form-control:focus {
+    border: 1px solid #3f987c;
+}
 /************************************** End Login *****************************************/
+
+
+
+
+/************************************** Start Layout *****************************************/
+
+.topbar {
+    background-image: url(../images/pattern.png);
+    background-color: #d3b063;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.navbar-default {
+    background-color: transparent !important;
+    border-top: 3px solid #42a283;
+}
+.side-menu {
+    background: #d3b063;
+    background-image: url('../images/shape3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 65% 100%;
+    height: 100vh;
+}
+.side-menu:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    background-color: rgba(13, 13, 13, 0.4);
+}
+.slimScrollDiv{
+    z-index: 99;
+}
+.topbar .topbar-left {
+    background: transparent;
+    border-top: 3px solid #42a283;
+    background-image: none;
+}
+.notification-box .dot {
+    border: 4px solid #42a283;
+}
+.notification-box .pulse {
+    border: 3px solid #42a283;
+    background-color: #42a283;
+}
+.img-thumbnail {
+    border: 1px solid #42a283;
+    background-color: #42a283;
+}
+i.zmdi.zmdi-menu , .page-title{
+    color: #000000;
+}
+.notification-box ul li a {
+    color: #fff;
+}
+i.zmdi.zmdi-notifications-none {
+    background: #000000;
+}
+.user-box ul li a , .text-custom {
+    color: #42a283 !important;
+}
+.user-box ul li a:hover , .text-custom:hover , .user-box ul li a:focus , .text-custom:focus {
+    color: #acacbf !important;
+}
+#sidebar-menu > ul > li > a.active {
+    border-right: 5px solid #d3b063;
+    color: #f4ce79 !important;
+}
+.footer a {
+    color: #42a283;
+}
+.btn-custom {
+    background-color: #d3b063 !important;
+    border: 1px solid #d3b063 !important;
+    border-bottom: 1px solid #d3b063 !important;
+}
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .btn-custom.focus, .btn-custom:active, .btn-custom:focus, .btn-custom:hover, .open > .dropdown-toggle.btn-custom {
+    background-color: #42a283 !important;
+    border: 1px solid #42a283 !important;
+}
+.m-l-5 {
+    vertical-align: unset;
+}
+.sidebar-inner {
+    overflow: auto !important;
+    position: relative;
+    z-index: 99;
+}
+/************************************** End Layout *****************************************/
 
 
 
 /************************************** Start Datatable *****************************************/
 .table-striped > tbody > tr:nth-of-type(odd), .table-hover > tbody > tr:hover, .table > thead > tr > td.active, .table > tbody > tr > td.active, .table > tfoot > tr > td.active, .table > thead > tr > th.active, .table > tbody > tr > th.active, .table > tfoot > tr > th.active, .table > thead > tr.active > td, .table > tbody > tr.active > td, .table > tfoot > tr.active > td, .table > thead > tr.active > th, .table > tbody > tr.active > th, .table > tfoot > tr.active > th {
     background-color: #e1e1e1 !important;
+}
+.label-warning {
+    background-color: #d3b063;
+}
+.btn-group .btn-default:hover, .btn-group .btn-default:focus {
+    background-color: rgb(66, 162, 131) !important;
+}
+.table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>th, .table>caption+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>td, .table>thead:first-child>tr:first-child>td {
+    font-size: 12px;
+}
+.table-responsive {
+    margin-top: 15px;
+}
+td a {
+    padding: 5px;
+    background-color: #42a283;
+}
+td a .fa{
+    vertical-align: middle;
 }
 /************************************** End Datatable *****************************************/
 
@@ -78,6 +248,16 @@ textarea.form-control {
     height: 90px !important;
     resize: none;
     overflow: auto;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
+    background-color: #42a283 !important;
+    border: 1px solid #42a283 !important;
+}
+.label-info {
+    background-color: #42a283;
+}
+.label-info a{
+    color: #fff;
 }
 /************************************** End Forms *****************************************/
 
@@ -101,5 +281,13 @@ textarea.form-control {
         display: table;
         margin: 0 auto;
     }
+    .navbar-default .navbar-left .page-title {
+font-size: 14px;
+    line-height: 1;
+    max-width: 175px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
 }
 
