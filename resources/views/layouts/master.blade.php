@@ -76,19 +76,18 @@
                         @if (Request::is('/') )
 
                             <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="#header">الرئيسية</a></li>
-                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
-                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="#participations">مشاركاتنا</a></li>
-                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="#actions">مبادراتنا</a></li>
+                            <li class="{{(Request::is('/#actions') ? 'active' : '')}}"><a href="#actions">مبادراتنا</a></li>
+                            <li class="{{(Request::is('/#participations') ? 'active' : '')}}"><a href="#participations">مشاركاتنا</a></li>
                             <li class="{{(Request::is('/gallery') ? 'active' : '')}}"><a href="{{route('website.gallery')}}">الصور والفيديوهات</a></li>
+                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
                             <li class="{{(Request::is('/contact') ? 'active' : '')}}"><a href="{{route('website.contact')}}">اتصل بنا</a></li>
 @else
 
 
-                            <li class="{{(Request::is('/') ? 'active' : '')}}><a href="{{route('website.index')}}#header">الرئيسية</a></li>
-                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
-                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#participations">مشاركاتنا</a></li>
-                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#actions">مبادراتنا</a></li>
+                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#header">الرئيسية</a></li>
+                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#actions">مبادراتنا</a></li><li class="{{(Request::is('/#participations') ? 'active' : '')}}"><a href="{{route('website.index')}}#participations">مشاركاتنا</a></li>
                             <li class="{{(Request::is('/gallery') ? 'active' : '')}}"><a href="{{route('website.gallery')}}">الصور والفيديوهات</a></li>
+                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
                             <li class="{{(Request::is('/contact') ? 'active' : '')}}"><a href="{{route('website.contact')}}">اتصل بنا</a></li>
 
                         @endif

@@ -118,7 +118,7 @@
 
 
     <!-------- Start action-imgs ------>
-    <section class="action-imgs all-sections mazidan">
+    <section class="action-imgs all-sections mazidan" id="participations">
         <div class="container">
             <h3 class="title brown">مزيدا من العطاء</h3>
             <h2 class="title green">مشاركات الفهدة</h2>
