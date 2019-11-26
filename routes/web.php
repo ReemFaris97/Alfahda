@@ -31,7 +31,7 @@ Route::group(array('prefix' => 'dashboard','as'=>'admin.','middleware'=>'auth','
     Route::resource('participants', 'participantController');
     Route::resource('partners', 'partnerController');
     Route::resource('galleries', 'galleryController');
-    Route::resource('subscribers', 'subscribeController');
+    Route::resource('subscribers', 'subscriberController');
     Route::resource('ambassadors', 'ambassadorController');
     Route::resource('sliders', 'sliderController');
     Route::resource('settings', 'SettingController');
@@ -49,6 +49,8 @@ Route::group(array('as'=>'website.','namespace' => 'website'), function() {
     Route::get('/sofra-singel/{id}', 'indexController@sofra_singel')->name('sofra-singel');
 
     Route::post('/contacts', 'indexController@postContacts')->name('Contacts');
+    Route::post('/subscribe', 'indexController@postsubscribe')->name('subscribe');
+
 
     Route::post('/volunteers', 'indexController@volunteers')->name('volunteers');
 

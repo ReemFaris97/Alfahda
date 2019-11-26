@@ -10,6 +10,7 @@ use App\Member;
 use App\Partener;
 use App\Participant;
 use App\Slider;
+use App\Subscriber;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -93,6 +94,21 @@ class indexController extends Controller
 
 
         $contacts=Contact::create($inputs);
+        alert()->success('تم الإرسال بنجاح سيتم الرد عليك لاحقا')->autoclose(5000);
+        return back();
+    }
+    public function postsubscribe(Request $request){
+
+        $this->validate($request,[
+
+
+            'email'=>'required|nullable|string|email|max:255|unique:contacts',
+
+        ]);
+        $inputs=$request->all();
+
+
+        $subscriber=Subscriber::create($inputs);
         alert()->success('تم الإرسال بنجاح سيتم الرد عليك لاحقا')->autoclose(5000);
         return back();
     }

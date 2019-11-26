@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Basic;
-use App\Category;
-use App\Partener;
-use App\Subscribe;
+
+use App\Subscriber;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Activity;
@@ -20,7 +18,7 @@ class subscriberController extends Controller
     public function index()
     {
 
-       $subscribers=Subscribe::all();
+       $subscribers=Subscriber::all();
 
      return view('admin.subscribers.index',compact('subscribers'));
 }
@@ -42,18 +40,7 @@ class subscriberController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
 
-        'image'=>'required|string|',
-
-
-
-
-    ]);
-        $inputs = $request->all();
-        Partener::create($inputs);
-        alert()->success('تم اضافة الشريك بنجاح !')->autoclose(5000);
-        return back();
     }
 
     /**
@@ -75,7 +62,7 @@ class subscriberController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.subscribers.edit')->with('category',Category::find($id));
+        return view('admin.subscribers.edit')->with('subscriber',Subscriber::find($id));
     }
 
     /**
@@ -87,29 +74,7 @@ class subscriberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category=Category::find($id);
 
-
-        $this->validate($request,[
-
-            'ar_name'=>'required|string|',
-            'en_name'=>'required|string|',
-
-
-
-
-
-        ]);
-
-
-        $inputs=$request->all();
-
-
-
-        $category->update($inputs);
-
-        alert()->success('تم تعديل القسم بنجاح !')->autoclose(5000);
-        return back();
     }
 
     /**
@@ -121,12 +86,12 @@ class subscriberController extends Controller
     public function destroy($id)
     {
 
-        $category=Category::find($id);
+        $subscriber=Subscriber::find($id);
 
 
-        $category->delete();
+        $subscriber->delete();
 
-        alert()->success('تم حذف القسم  بنجاح !')->autoclose(5000);
+        alert()->success('تم حذف المشترك  بنجاح !')->autoclose(5000);
 
         return back();
     }

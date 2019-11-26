@@ -123,8 +123,10 @@
 <section class="footer">
     <h2 class="title"> اشترك معنا </h2>
 
-    <form action="#" class="subscribe form1">
-        <input type="email" class="form-control" placeholder="ضع ايميلك هنا">
+    {{--<form action="#" class="subscribe form1">--}}
+        {!!Form::open( ['route' => 'website.subscribe' ,'class'=>'subscribe form1', 'method' => 'Post','files' => true]) !!}
+
+        <input type="email" class="form-control" placeholder="ضع ايميلك هنا" name="email">
         <button type="submit" class="send"> <i class="fas fa-long-arrow-alt-right"></i> </button>
     </form>
 
