@@ -13,7 +13,7 @@
     <div class="form-group form-float">
         <label class="form-label"> النوع </label>
         <div class="form-line">
-            {!! Form::select("type",['url','image'],null,['class'=>'form-control'])!!}
+            {!! Form::select("type",['url'=>'رابط' ,'image'=>'صورة'],null,['class'=>'form-control'])!!}
         </div>
     </div>
 </div>
@@ -21,7 +21,7 @@
 
 <div class="col-sm-6 col-xs-12  pull-right">
     <div class="form-group form-float">
-        <label class="form-label"> لينك الفيديو </label>
+        <label class="form-label"> رابط الفيديو </label>
         <div class="form-line">
             {!! Form::url("url",null,['class'=>'form-control'])!!}
         </div>
