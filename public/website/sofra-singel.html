@@ -139,8 +139,21 @@
 
 
                         </p>
-                    </div>
 
+
+                    </div>
+                    <div class="like-sofra">
+                         <span class="number-like">
+                            356
+                        </span>
+                        
+                        <svg id="like" width="30" height="30" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle id="circle" fill="#4A4B4C" cx="18" cy="18" r="18"></circle>
+                            <path d="M18.441,26.8609002 C18.1725,27.0485402 17.82,27.0441802 17.5575,26.8609002 C17.2095,26.6150702 9,20.7705101 9,16.1449001 C9,12.92443 11.4585,11 13.8345,11 C15.261,11 16.9395,11.71421 18,13.595 C19.0575,11.71421 20.7375,11 22.1655,11 C24.5415,11 27,12.92443 27,16.1449001 C27,20.7705101 18.7905,26.6150702 18.441,26.8609002" id="heart" fill="#F0F0F0" fill-rule="nonzero"></path>
+                        </svg>
+
+                       
+                    </div>
                 </div>
 
 
@@ -203,7 +216,7 @@
     <script src="js/jquery.fancybox.min.js"></script>
 
 
-<!--
+    <!--
     <script>
         var element = document.querySelector('.cube1');
 
@@ -220,7 +233,14 @@
     </script>
 -->
     <!----------------------------------- END ------------------------------------------>
+    <script>
+        const like = document.getElementById("like");
 
+        like.addEventListener("click", () => {
+            like.classList.add("has-been-clicked");
+        });
+
+    </script>
 
     <script src="js/script.js"></script>
 

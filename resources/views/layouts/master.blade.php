@@ -58,7 +58,6 @@
 <div class="navbar">
     <div class="">
         <div class="row">
-
             <div class="col-lg-2 col-sm-2 col-xs-8 no-padding">
                 <div class="right-one">
                     <div id="nav-icon1">
@@ -71,8 +70,7 @@
                     <a href="#header" class="logo-nav"><img src="{{asset('website/img/logo2.png')}}"></a>
                 </div>
             </div>
-
-            <div class="col-lg-8 col-sm-7 col-xs-0 no-padding">
+            <div class="col-lg-8 col-sm-8 col-xs-0 no-padding">
                 <div class="navy">
                     <ul class="nav cf" id="ul1">
                         @if (Request::is('/') )
@@ -96,15 +94,12 @@
                                   </ul>
                 </div>
             </div>
-
-            <div class="col-md-2 col-sm-3 col-xs-4 no-padding">
+            <div class="col-md-2 col-sm-2 col-xs-4 no-padding">
                 <ul class="nav-left">
                     <li><a href="https://api.whatsapp.com/send?phone={{ getsetting('phone') }}"> <span><i class="fab fa-whatsapp"></i></span> <span class="call-txt">{{ getsetting('phone') }}</span> </a></li>
                     <li><a href="mailto:{{ getsetting('email') }}"> <span><i class="far fa-envelope"></i></span> <span class="call-txt">{{ getsetting('email') }}</span></a></li>
                 </ul>
             </div>
-
-
         </div>
     </div>
 </div>
@@ -156,7 +151,9 @@
     <i class="fas fa-long-arrow-alt-up"></i>
 </div>
 
-
+<a href="https://wa.me/966410545" class="chat">
+    <i class="fab fa-whatsapp"></i>
+    </a>
 
 <!-- Strat End -->
 <!--===============================

@@ -265,7 +265,7 @@ a,
 a:hover,
 a:focus {
     text-decoration: none;
-    cursor: pointer;
+   
 }
 
 button {
@@ -794,7 +794,7 @@ ul.nav > li:after {
     height: calc(100vh - 180px);
     width: 100%;
     object-fit: unset;
-/*    object-position: top*/
+    /*    object-position: top*/
 }
 
 @media(min-width:768px) {
@@ -811,6 +811,8 @@ ul.nav > li:after {
 
 .arabisk {
     width: 100%;
+    height: 20px;
+    object-fit: cover;
 }
 
 .shape {
@@ -1044,7 +1046,7 @@ span.pause-video {
     align-items: center;
     border-radius: 50%;
     transition: 0.4s all ease-in-out;
-    bottom: calc(50% - 40px);
+    bottom: 80px;
     right: calc(50% - 40px);
 }
 
@@ -1062,9 +1064,13 @@ span.hidden-control {
     visibility: hidden;
 }
 
+.slider-caption.center {
+    bottom: 115px;
+}
+
 .slider-caption {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     text-align: center;
     padding: 20px 15px;
@@ -1155,14 +1161,13 @@ span.hidden-control {
     display: block;
 }
 
-.slide .owl-carousel .owl-nav .owl-prev,
-.slide .owl-carousel .owl-nav .owl-next {
+.slide .owl-carousel .owl-nav .owl-prev, .slide .owl-carousel .owl-nav .owl-next {
     position: absolute;
     top: calc(50% - 24px);
-    line-height: 42px;
-    height: 48px;
-    width: 48px;
-    font-size: 42px;
+    line-height: 0px;
+    height: 33px;
+    width: 33px;
+    font-size: 24px;
     background-color: #f1f1f1;
     color: #42a283;
     text-align: center;
@@ -1314,7 +1319,7 @@ span.hidden-control {
 
 .partner1:hover,
 .partner1:focus {
-    background-color: rgba(211, 176, 99, 0.25);
+    background-color: transparent;
 }
 
 .partner1 img {
@@ -1477,7 +1482,7 @@ span.hidden-control {
 .breadcrumbs {
     height: 250px;
     line-height: 180px;
-   
+
     background-size: cover;
     background-position: 100% 26%;
     position: relative;
@@ -1486,22 +1491,27 @@ span.hidden-control {
 }
 
 .baner1 {
- background-image: url(../img/baner1.jpg);
+    background-image: url(../img/baner1.jpg);
 }
+
 .baner2 {
- background-image: url(../img/baner2.jpg);
+    background-image: url(../img/baner2.jpg);
 }
+
 .baner3 {
- background-image: url(../img/baner3.jpg);
+    background-image: url(../img/baner3.jpg);
 }
+
 .baner4 {
- background-image: url(../img/baner4.jpg);
+    background-image: url(../img/baner4.jpg);
 }
+
 .baner5 {
- background-image: url(../img/baner5.jpg);
+    background-image: url(../img/baner5.jpg);
 }
+
 .baner6 {
- background-image: url(../img/baner6.jpg);
+    background-image: url(../img/baner6.jpg);
 }
 
 .breadcrumbs:before {
@@ -1517,11 +1527,12 @@ span.hidden-control {
 
 .titles {
     position: absolute;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    top: 0;
+    right: 15px;
+    left: unset;
+    margin: 0;
+    top: 0px;
     z-index: 9;
+    line-height: 0px;
 }
 
 .breadcrumbs a {
@@ -1531,7 +1542,7 @@ span.hidden-control {
 
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
-    color: #42a283;
+    color: #D3B063;
 }
 
 .breadcrumbs h3 {
@@ -2035,10 +2046,12 @@ span.hidden-control {
 }
 
 @media (max-width: 1024px) {
+
     /*************************************************** Start  ****************************************************/
     ul.nav > li {
         padding: 0 8px;
     }
+
     /*************************************************** End  ****************************************************/
 
 }
@@ -2190,6 +2203,7 @@ span.hidden-control {
         -ms-flex-align: center;
         align-items: center;
         margin: 0;
+        justify-content: center;
     }
 
     /*
@@ -2437,7 +2451,20 @@ span.hidden-control {
     }
 
     /*************************************************/
+    #owl-main.owl-carousel .owl-item img,
+    #owl-main.owl-carousel .owl-item video {
+        height: auto;
+        object-fit: contain;
+    }
 
+    span.play-video,
+    span.pause-video {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: calc(50% - 20px);
+        font-size: 31px;
+    }
 
 }
 
@@ -2463,6 +2490,11 @@ span.hidden-control {
     .button1 {
         font-size: 14px !important;
     }
+    span.play-video, span.pause-video {
+    width: 24px;
+    height: 24px;
+    right: calc(50% - 12px);
+}
 
     /***************************/
 
@@ -2736,10 +2768,11 @@ section.mother-message {
 }
 
 .small-font a {
-        font-family: 'aref-regular' !important;
+    font-family: 'Cairo-Regular' !important;
     color: #FFF;
-    font-size: 26px;    
+    font-size: 18px;
     display: inline-block;
+    letter-spacing: 0px;
 }
 
 
@@ -2787,7 +2820,7 @@ section.mother-message {
 .slider-caption.right span {
     color: #d3b063;
     line-height: 33px;
-    font-family: 'aref-regular' !important;
+   
 }
 
 .slider-caption.center {
@@ -2919,7 +2952,7 @@ a.back2:active span {
     margin: 0px;
     margin-bottom: 15px;
     font-size: 45px;
-    font-family: 'aref-regular' !important;
+    font-family: 'Cairo-Regular' !important;
     font-weight: 600;
 
 }
@@ -2994,7 +3027,7 @@ nav ul li {
     --c: #42a283;
     color: #42a283;
     font-size: 16px;
-/*    border: 3px solid #42a283;*/
+    /*    border: 3px solid #42a283;*/
     border-radius: 0.5em;
     width: 12em;
     height: 3em;
@@ -3088,9 +3121,16 @@ nav ul li span:nth-child(4) {
     }
 
     .small-font a {
-        font-size: 26px;
+        font-size: 15px;
     }
 
+    nav ul li {
+   width: 120px;
+    height: 35px;
+    margin-bottom: 0px;
+    letter-spacing: 3;
+    line-height: 34px;
+    }
     .slider-caption span.big-font {
         font-size: 27px;
         margin-bottom: 25px;
@@ -3112,10 +3152,12 @@ nav ul li span:nth-child(4) {
         display: inline-block
     }
 }
+
 .social {
     margin: 14px auto 0 auto;
     margin-bottom: 75px;
 }
+
 .footer .logo-nav {
     float: none;
     position: absolute;
@@ -3124,9 +3166,11 @@ nav ul li span:nth-child(4) {
     height: auto;
     width: 60px;
 }
+
 .logo-nav img {
     width: 60px;
 }
+
 /* Style the tab */
 .tab {
     overflow: hidden;
@@ -3137,7 +3181,7 @@ nav ul li span:nth-child(4) {
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-    background-color:transparent;
+    background-color: transparent;
     outline: none;
     cursor: pointer;
     color: #FFF;
@@ -3146,16 +3190,18 @@ nav ul li span:nth-child(4) {
 
 
 .tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border-top: none;
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
 }
+
 form.contact-form.form1 .row > label {
     width: 100%;
     text-align: right;
     margin-bottom: 10px;
     margin-top: 13px;
 }
+
 form.contact-form.form1 .row select.form-control {
     padding: 0px !important;
     font-size: 15px;
@@ -3172,13 +3218,18 @@ form.contact-form.form1 .row select.form-control {
     justify-content: center;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
     color: #fff;
     background-color: transparent;
 }
-.nav-pills>li.active>a>span, .nav-pills>li.active>a>span:focus, .nav-pills>li.active>a>span:hover {
+
+.nav-pills > li.active > a > span,
+.nav-pills > li.active > a > span:focus,
+.nav-pills > li.active > a > span:hover {
     color: #fff;
- background-color: #42a283; 
+    background-color: #42a283;
 }
 
 section.bee3D--slide.bee3D--slide__active {
@@ -3186,28 +3237,41 @@ section.bee3D--slide.bee3D--slide__active {
     border: 2px solid #d3b063;
     border-radius: 8px;
 }
+
 .input-block span {
     position: absolute;
     top: 0;
     font-size: 18px;
 }
+
 .input-block input[type=file] {
     display: block;
     margin-top: 8px;
 }
 
 button.tablinks.btn-3.active span {
-    background: #42a283 ;
+    background: #42a283;
 }
-div.datedropper.primary .pick-lg-b .pick-sl:before, div.datedropper.primary .pick-lg-h, div.datedropper.primary .pick-m, div.datedropper.primary .pick-submit, div.datedropper.primary:before {
+
+div.datedropper.primary .pick-lg-b .pick-sl:before,
+div.datedropper.primary .pick-lg-h,
+div.datedropper.primary .pick-m,
+div.datedropper.primary .pick-submit,
+div.datedropper.primary:before {
     background-color: #42a283;
 }
-div.datedropper.primary .pick li span, div.datedropper.primary .pick-btn, div.datedropper.primary .pick-lg-b .pick-wke, div.datedropper.primary .pick-y.pick-jump {
+
+div.datedropper.primary .pick li span,
+div.datedropper.primary .pick-btn,
+div.datedropper.primary .pick-lg-b .pick-wke,
+div.datedropper.primary .pick-y.pick-jump {
     color: #42a283;
 }
+
 .contact.all-sections ul.nav.nav-pills {
     margin-bottom: 25px;
 }
+
 .contact.all-sections ul.nav.nav-pills {
     margin-bottom: 25px;
     display: inline-flex;
@@ -3216,25 +3280,30 @@ div.datedropper.primary .pick li span, div.datedropper.primary .pick-btn, div.da
     align-items: center;
     justify-content: center;
 }
+
 img.img-input-block {
     width: 150px;
     height: 100px;
     display: inline-block;
     margin: auto;
 }
+
 .contact-form .input-block.img-input {
     text-align: center;
     height: auto !important;
     display: inline-block;
     padding: 10px 20px;
 }
+
 .contact-form .input-block.img-input p {
     font-size: 19px;
     margin-bottom: 4px;
 }
-.contact-form .input-block.img-input input{
+
+.contact-form .input-block.img-input input {
     display: none;
-} 
+}
+
 .contact-form .input-block.img-input div {
     position: relative;
     width: 220px;
@@ -3242,6 +3311,7 @@ img.img-input-block {
     text-align: center;
     display: inline-block;
 }
+
 .contact-form .input-block.img-input label {
     position: absolute;
     bottom: 0 !important;
@@ -3256,34 +3326,118 @@ img.img-input-block {
     border-radius: 8px;
     transition: .5s all;
 }
+
 .input-block label.label-date {
     top: 10px !important;
     font-size: 14px !important;
 }
-.contact-form .input-block.img-input label i{
-   color: #fff !important;
+
+.contact-form .input-block.img-input label i {
+    color: #fff !important;
     transition: .5s all;
 }
+
 div.datedropper .picker ul.pick:hover .pick-arw {
     opacity: 1;
     font-size: 16px;
 }
+
 div.datedropper.primary {
     border-radius: 6px;
     width: 180px;
     z-index: 1;
 }
-.contact-form .input-block.img-input label:hover{
+
+.contact-form .input-block.img-input label:hover {
     background: #fff;
     cursor: pointer;
 }
-.contact-form .input-block.img-input label:hover i{
-   color: #42a283 !important
+
+.contact-form .input-block.img-input label:hover i {
+    color: #42a283 !important
 }
 
-.contact-form .input-block.img-input img{
+.contact-form .input-block.img-input img {
     width: 100%;
     height: 100%;
     display: inline-block;
     border-radius: 8px;
-} 
+}
+.svg-inline--fa.fa-w-8 {
+    width: 12px;
+}
+nav.button-participations {
+    text-align: center;
+}
+nav.button-participations li a {
+    color: #FFF;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+.chat {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    background: #d3b063;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
+    font-size: 30px;
+    transition: .5s all;
+    z-index: 999999;
+}
+.chat:hover , .chat:focus , .chat:active {
+    background: #42a283;
+    color: #FFF
+}
+
+
+
+
+
+/*************************** like /***********/
+
+
+  svg:hover #circle {
+  fill: #42a283;
+}
+svg:hover #heart {
+  fill: #FFF;
+  animation: heartbeat 0.5s ease-in-out both;
+  transform-origin: center center;
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.2));
+}
+svg.has-been-clicked #circle {
+  fill: #d3b063;
+}
+svg.has-been-clicked #heart {
+  fill: #FFF;
+}
+
+@keyframes heartbeat {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.2));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.2));
+    transform: scale(1.5);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.2));
+    transform: scale(1);
+  }
+}
+.like-sofra {
+    text-align: left;
+    padding: 10px;
+}
+.like-sofra .number-like {
+    color: #000;
+}
+
+
