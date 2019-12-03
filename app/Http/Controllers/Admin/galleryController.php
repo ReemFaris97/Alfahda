@@ -47,7 +47,7 @@ class galleryController extends Controller
 
 
     ]);
-        $image = uploader($request, 'image');
+        $image = fileUploader($request->image);
 
 
         $inputs = $request->all();

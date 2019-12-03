@@ -22,6 +22,7 @@ class ambassadorController extends Controller
 
        $ambassadors=Ambassador::all();
 
+      // dd("gdcbfv ");
      return view('admin.ambassadors.index',compact('ambassadors'));
 }
     /**

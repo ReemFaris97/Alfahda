@@ -4,12 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Subscribe extends Model
+class Keeper extends Model
 {
 
     protected $fillable = [
-    'email'
+    'name','email','phone','city','twitter','about_us','services'
     ];
+
 
 
 

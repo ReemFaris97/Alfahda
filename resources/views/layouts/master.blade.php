@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="{{asset('website/img/logo-sm.png')}}">
     <link rel="stylesheet" href="{{asset('website/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('website/css/animate.css')}}">
+
+    <link rel="stylesheet" href="{{asset('website/css/datedropper.min.css')}}">
     <!---- This for here only ---------->
     <link rel="stylesheet" href="{{asset('website/css/jquery.fancybox.min.css')}}">
     <link rel="stylesheet" href="{{asset('website/css/owl.theme.default.min.css')}}">
@@ -57,7 +59,7 @@
     <div class="">
         <div class="row">
 
-            <div class="col-lg-3 col-sm-2 col-xs-8 no-padding">
+            <div class="col-lg-2 col-sm-2 col-xs-8 no-padding">
                 <div class="right-one">
                     <div id="nav-icon1">
                         <span></span>
@@ -70,25 +72,24 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-sm-7 col-xs-0 no-padding">
+            <div class="col-lg-8 col-sm-7 col-xs-0 no-padding">
                 <div class="navy">
                     <ul class="nav cf" id="ul1">
                         @if (Request::is('/') )
 
                             <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="#header">الرئيسية</a></li>
-                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
-                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="#participations">مشاركاتنا</a></li>
-                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="#actions">مبادراتنا</a></li>
+                            <li class="{{(Request::is('/#actions') ? 'active' : '')}}"><a href="#actions">مبادراتنا</a></li>
+                            <li class="{{(Request::is('/#participations') ? 'active' : '')}}"><a href="#participations">مشاركاتنا</a></li>
                             <li class="{{(Request::is('/gallery') ? 'active' : '')}}"><a href="{{route('website.gallery')}}">الصور والفيديوهات</a></li>
+                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
                             <li class="{{(Request::is('/contact') ? 'active' : '')}}"><a href="{{route('website.contact')}}">اتصل بنا</a></li>
 @else
 
 
-                            <li class="{{(Request::is('/') ? 'active' : '')}}><a href="{{route('website.index')}}#header">الرئيسية</a></li>
-                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
-                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#participations">مشاركاتنا</a></li>
-                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#actions">مبادراتنا</a></li>
+                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#header">الرئيسية</a></li>
+                            <li class="{{(Request::is('/') ? 'active' : '')}}"><a href="{{route('website.index')}}#actions">مبادراتنا</a></li><li class="{{(Request::is('/#participations') ? 'active' : '')}}"><a href="{{route('website.index')}}#participations">مشاركاتنا</a></li>
                             <li class="{{(Request::is('/gallery') ? 'active' : '')}}"><a href="{{route('website.gallery')}}">الصور والفيديوهات</a></li>
+                            <li class="{{(Request::is('/about') ? 'active' : '')}}"><a href="{{route('website.about')}}">من نحن</a></li>
                             <li class="{{(Request::is('/contact') ? 'active' : '')}}"><a href="{{route('website.contact')}}">اتصل بنا</a></li>
 
                         @endif
@@ -96,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-3 col-xs-4 no-padding">
+            <div class="col-md-2 col-sm-3 col-xs-4 no-padding">
                 <ul class="nav-left">
                     <li><a href="https://api.whatsapp.com/send?phone={{ getsetting('phone') }}"> <span><i class="fab fa-whatsapp"></i></span> <span class="call-txt">{{ getsetting('phone') }}</span> </a></li>
                     <li><a href="mailto:{{ getsetting('email') }}"> <span><i class="far fa-envelope"></i></span> <span class="call-txt">{{ getsetting('email') }}</span></a></li>
@@ -124,8 +125,10 @@
 <section class="footer">
     <h2 class="title"> اشترك معنا </h2>
 
-    <form action="#" class="subscribe form1">
-        <input type="email" class="form-control" placeholder="ضع ايميلك هنا">
+    {{--<form action="#" class="subscribe form1">--}}
+        {!!Form::open( ['route' => 'website.subscribe' ,'class'=>'subscribe form1', 'method' => 'Post','files' => true]) !!}
+
+        <input type="email" class="form-control" placeholder="ضع ايميلك هنا" name="email">
         <button type="submit" class="send"> <i class="fas fa-long-arrow-alt-right"></i> </button>
     </form>
 

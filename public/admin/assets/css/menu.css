@@ -362,14 +362,24 @@ html {
 }
 
 #sidebar-menu > ul > li > a {
-    color: #fff;
+    color: #FFF;
     display: block;
+    font-weight: 600;
     padding: 12px 20px;
     margin: 4px 0;
     background-color: transparent;
     border-right: 3px solid transparent;
+    font-size: 17px;
 }
-
+.left.side-menu:before {
+    content: "";
+    background: rgba(3, 3, 3, .6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 #sidebar-menu > ul > li > a:hover {
     color: #71b6f9;
     text-decoration: none;

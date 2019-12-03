@@ -21,7 +21,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <div class="card-box table-responsive">
+            <div class="card-box ">
 
                 <h4 class="header-title m-t-0 m-b-30">كل الصور  او الفيديوهات </h4>
 
