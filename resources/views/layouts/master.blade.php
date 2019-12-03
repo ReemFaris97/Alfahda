@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{asset('website/css/demo.css')}}">
     <!----------->
     <link rel="stylesheet" href="{{asset('website/css/style.css')}}">
+    
+    
     <!------ IE -------->
     <script src="{{asset('website/js/html5shiv.min.js')}}"></script>
     <script src="{{asset('website/js/respond.min.js')}}"></script>
